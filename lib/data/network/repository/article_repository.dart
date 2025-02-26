@@ -12,15 +12,15 @@ class ArticleRepository extends BaseRepository {
   final ApiClient _apiClient;
   ArticleRepository(this._apiClient);
 
-  Future<Either<Failure, List<Article>>> getAllArticles() async {
+  Future<Either<FailureException, List<Article>>> getAllArticles() async {
     return invokeRequest(() => _apiClient.getAllArticles());
   }
 
-  Future<Either<Failure, Article>> getArticleById(String articleId) async {
+  Future<Either<FailureException, Article>> getArticleById(String articleId) async {
     return invokeRequest(() => _apiClient.getArticleById(articleId));
   }
 
-  Future<Either<Failure, List<ArticleCategory>>> getAllArticleCategories() async {
+  Future<Either<FailureException, List<ArticleCategory>>> getAllArticleCategories() async {
     return invokeRequest(() => _apiClient.getAllArticleCategories());
   }
 }

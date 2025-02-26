@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:help4kids_front/core/error_handler/error_placeholder.dart';
-import 'package:help4kids_front/core/extension/context_extension.dart';
-import 'package:help4kids_front/core/routing/screens.dart';
-import 'package:help4kids_front/presentation/pages/widgets/progress_widget.dart';
 
 /// Handles [error] by placeholder or redirecting to relevant screen
 ///

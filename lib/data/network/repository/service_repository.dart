@@ -11,11 +11,11 @@ class ServiceRepository extends BaseRepository {
   final ApiClient _apiClient;
   ServiceRepository(this._apiClient);
 
-  Future<Either<Failure, List<Service>>> getAllServices() async {
+  Future<Either<FailureException, List<Service>>> getAllServices() async {
     return invokeRequest(() => _apiClient.getAllServices());
   }
 
-  Future<Either<Failure, Service>> getServiceById(String serviceId) async {
+  Future<Either<FailureException, Service>> getServiceById(String serviceId) async {
     return invokeRequest(() => _apiClient.getServiceById(serviceId));
   }
 }

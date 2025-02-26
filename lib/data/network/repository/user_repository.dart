@@ -11,11 +11,11 @@ class UserRepository extends BaseRepository {
   final ApiClient _apiClient;
   UserRepository(this._apiClient);
 
-  Future<Either<Failure, User>> login(String email, String password) async {
+  Future<Either<FailureException, User>> login(String email, String password) async {
     return invokeRequest(() => _apiClient.login({'email': email, 'password': password}));
   }
 
-  Future<Either<Failure, User>> register(String email, String password, String firstName, String lastName) async {
+  Future<Either<FailureException, User>> register(String email, String password, String firstName, String lastName) async {
     return invokeRequest(() => _apiClient.register({
       'email': email,
       'password': password,
@@ -24,19 +24,19 @@ class UserRepository extends BaseRepository {
     }));
   }
 
-  Future<Either<Failure, User>> getProfile() async {
+  Future<Either<FailureException, User>> getProfile() async {
     return invokeRequest(() => _apiClient.getUserProfile());
   }
 
-  Future<Either<Failure, void>> changePassword(Map<String, dynamic> body) async {
+  Future<Either<FailureException, void>> changePassword(Map<String, dynamic> body) async {
     return invokeRequest(() => _apiClient.changePassword(body));
   }
 
-  Future<Either<Failure, void>> verifyEmail(String token) async {
+  Future<Either<FailureException, void>> verifyEmail(String token) async {
     return invokeRequest(() => _apiClient.verifyEmail(token));
   }
 
-  Future<Either<Failure, void>> resendEmail(String email) async {
+  Future<Either<FailureException, void>> resendEmail(String email) async {
     return invokeRequest(() => _apiClient.resendEmail({'email': email}));
   }
 }

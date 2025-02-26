@@ -11,15 +11,15 @@ class OrderRepository extends BaseRepository {
   final ApiClient _apiClient;
   OrderRepository(this._apiClient);
 
-  Future<Either<Failure, order.Order>> createOrder(Map<String, dynamic> orderData) async {
+  Future<Either<FailureException, order.Order>> createOrder(Map<String, dynamic> orderData) async {
     return invokeRequest(() => _apiClient.createOrder(orderData));
   }
 
-  Future<Either<Failure, List<order.Order>>> getOrdersByUser() async {
+  Future<Either<FailureException, List<order.Order>>> getOrdersByUser() async {
     return invokeRequest(() => _apiClient.getOrdersByUser());
   }
 
-  Future<Either<Failure, order.Order>> getOrderById(String orderId) async {
+  Future<Either<FailureException, order.Order>> getOrderById(String orderId) async {
     return invokeRequest(() => _apiClient.getOrderById(orderId));
   }
 }

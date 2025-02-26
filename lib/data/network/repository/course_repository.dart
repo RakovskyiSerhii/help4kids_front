@@ -11,11 +11,11 @@ class CourseRepository extends BaseRepository {
   final ApiClient _apiClient;
   CourseRepository(this._apiClient);
 
-  Future<Either<Failure, List<Course>>> getAllCourses() async {
+  Future<Either<FailureException, List<Course>>> getAllCourses() async {
     return invokeRequest(() => _apiClient.getAllCourses());
   }
 
-  Future<Either<Failure, List<Course>>> getPurchasedCourses() async {
+  Future<Either<FailureException, List<Course>>> getPurchasedCourses() async {
     return invokeRequest(() => _apiClient.getPurchasedCourses());
   }
 }

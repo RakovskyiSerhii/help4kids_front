@@ -11,11 +11,11 @@ class ConsultationAppointmentRepository extends BaseRepository {
   final ApiClient _apiClient;
   ConsultationAppointmentRepository(this._apiClient);
 
-  Future<Either<Failure, List<ConsultationAppointment>>> getAllAppointments() async {
+  Future<Either<FailureException, List<ConsultationAppointment>>> getAllAppointments() async {
     return invokeRequest(() => _apiClient.getAllAppointments());
   }
 
-  Future<Either<Failure, ConsultationAppointment>> getAppointmentById(String appointmentId) async {
+  Future<Either<FailureException, ConsultationAppointment>> getAppointmentById(String appointmentId) async {
     return invokeRequest(() => _apiClient.getAppointmentById(appointmentId));
   }
 }

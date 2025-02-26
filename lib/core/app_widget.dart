@@ -1,15 +1,15 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:help4kids_front/core/app_bloc/app_cubit.dart';
+import 'package:help4kids_front/core/app_bloc/app_state.dart';
 import 'package:help4kids_front/core/auth_state_handler/auth_state_handler_widget.dart';
+import 'package:help4kids_front/core/di/injection.dart';
 import 'package:help4kids_front/core/error_handler/error_handler.dart';
 import 'package:help4kids_front/core/routing/screens.dart';
 import 'package:help4kids_front/core/theme/app_colors.dart';
-import 'package:help4kids_front/gen/assets.gen.dart';
+import 'package:help4kids_front/generated//assets.gen.dart';
 import 'package:help4kids_front/generated/l10n.dart';
 import 'package:help4kids_front/presentation/pages/articles/articles_screen.dart';
 import 'package:help4kids_front/presentation/pages/consultations/consultations_screen.dart';
@@ -60,7 +60,6 @@ class _AppWidgetState extends State<AppWidget> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -71,9 +70,7 @@ class _AppWidgetState extends State<AppWidget> {
       // routerDelegate: _router.routerDelegate,
 
       debugShowCheckedModeBanner: false,
-      supportedLocales: const [
-        Locale("uk_UA"),
-      ],
+      supportedLocales:  AppLocalizations.delegate.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -84,7 +81,17 @@ class _AppWidgetState extends State<AppWidget> {
         return AuthStateHandlerWidget(
           child: ErrorHandlerWidget(
             navigatedContextProvider: () => _rootNavigatorKey.currentContext,
-            child: child ?? const SizedBox.shrink(),
+            child: BlocProvider(
+              create: (_) => getIt.get<AppCubit>(),
+              child: BlocBuilder<AppCubit, AppState>(
+                builder: (context, state) {
+                  if (state.loadingResult?.isProgress == true) {
+                    return CircularProgressIndicator();
+                  }
+                  return child ?? const SizedBox.shrink();
+                },
+              ),
+            ),
           ),
           onUnauthorized: () {
             _resetNavigator();

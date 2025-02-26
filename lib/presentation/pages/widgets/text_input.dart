@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:help4kids_front/core/extension/context_extension.dart';
 import 'package:help4kids_front/core/theme/theme_extension.dart';
-import 'package:help4kids_front/gen/assets.gen.dart';
+import 'package:help4kids_front/generated/assets.gen.dart';
 
 class TextInput extends StatefulWidget {
   final String? label;
@@ -110,15 +109,14 @@ class _TextInputState extends State<TextInput> {
                     padding: const EdgeInsets.only(right: 20),
                     child: GestureDetector(
                       onTap: _togglePasswordVisibility,
-                      child: SvgPicture.asset(
-                        _isPasswordHidden
-                            ? Assets.icons.icEyeClosed
-                            : Assets.icons.icEyeOpen,
-                        colorFilter: ColorFilter.mode(
-                            context
-                                .theme.appColors.textPlainButtonForegroundColor,
-                            BlendMode.srcIn),
-                      ),
+                      child: (_isPasswordHidden
+                              ? Assets.icons.icEyeClosed
+                              : Assets.icons.icEyeOpen)
+                          .svg(
+                              colorFilter: ColorFilter.mode(
+                                  context.theme.appColors
+                                      .textPlainButtonForegroundColor,
+                                  BlendMode.srcIn)),
                     ),
                   )
                 : null),

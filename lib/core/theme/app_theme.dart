@@ -119,11 +119,13 @@ final _darkAppColorsScheme = AppColorScheme(
   primaryTextColor: AppColors.darkTextColor,
   secondaryTextColor: AppColors.darkTextSecondaryColor,
   primaryButtonBackgroundColor: AppColors.darkPrimaryColor,
-  primaryButtonDisabledBackgroundColor: AppColors.darkBrandDisabledColor.withOpacity(0.44),
+  primaryButtonDisabledBackgroundColor:
+      AppColors.darkBrandDisabledColor.withOpacity(0.44),
   secondaryButtonBackgroundColor: AppColors.darkSurfaceColor,
   secondaryButtonDisabledBackgroundColor: AppColors.darkSurfaceColor,
   primaryButtonForegroundColor: Colors.black,
-  primaryButtonDisabledForegroundColor: AppColors.darkBackgroundColor.withOpacity(0.64),
+  primaryButtonDisabledForegroundColor:
+      AppColors.darkBackgroundColor.withOpacity(0.64),
   secondaryButtonForegroundColor: Colors.white,
   secondaryButtonDisabledForegroundColor: AppColors.paletteDarkGreyColor,
   textPlainButtonForegroundColor: Colors.white,
@@ -145,11 +147,14 @@ final _lightAppColorsScheme = AppColorScheme(
   primaryTextColor: AppColors.lightTextColor,
   secondaryTextColor: AppColors.lightTextSecondaryColor,
   primaryButtonBackgroundColor: AppColors.lightPrimaryColor,
-  primaryButtonDisabledBackgroundColor: AppColors.lightBrandDisabledColor.withOpacity(0.64),
+  primaryButtonDisabledBackgroundColor:
+      AppColors.lightBrandDisabledColor.withOpacity(0.64),
   secondaryButtonBackgroundColor: AppColors.lightAccentSecondBackgroundColor,
-  secondaryButtonDisabledBackgroundColor: AppColors.lightAccentSecondBackgroundColor,
+  secondaryButtonDisabledBackgroundColor:
+      AppColors.lightAccentSecondBackgroundColor,
   primaryButtonForegroundColor: Colors.black,
-  primaryButtonDisabledForegroundColor: AppColors.darkBackgroundColor.withOpacity(0.64),
+  primaryButtonDisabledForegroundColor:
+      AppColors.darkBackgroundColor.withOpacity(0.64),
   secondaryButtonForegroundColor: Colors.black,
   secondaryButtonDisabledForegroundColor: AppColors.paletteDarkGreyColor,
   textPlainButtonForegroundColor: Colors.black,
@@ -168,7 +173,8 @@ final _appTypography = AppTypography(
   bodyLargeBold: _textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w600),
   bodyMediumBold: _textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w600),
   bodySmallBold: _textTheme.bodySmall!.copyWith(fontWeight: FontWeight.w600),
-  labelMediumBold: _textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w600),
+  labelMediumBold:
+      _textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w600),
   labelSmallBold: _textTheme.labelSmall!.copyWith(fontWeight: FontWeight.w600),
   appBarTitleBig: _poppins(fontSize: 20, fontWeight: FontWeight.w500),
   bodyExtraSmall: _poppins(fontSize: 8, fontWeight: FontWeight.w400),
@@ -182,11 +188,15 @@ InputDecorationTheme _inputDecorationTheme(bool isDark) {
       (states) {
         if (states.contains(WidgetState.error)) {
           return _textTheme.bodyMedium!.copyWith(
-            color: isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
+            color: isDark
+                ? AppColors.darkErrorMainColor
+                : AppColors.lightErrorMainColor,
           );
         }
         return _textTheme.bodyMedium!.copyWith(
-          color: isDark ? AppColors.darkTextSecondaryColor : AppColors.lightTextSecondaryColor,
+          color: isDark
+              ? AppColors.darkTextSecondaryColor
+              : AppColors.lightTextSecondaryColor,
         );
       },
     ),
@@ -194,22 +204,30 @@ InputDecorationTheme _inputDecorationTheme(bool isDark) {
       (states) {
         if (states.contains(WidgetState.error)) {
           return _textTheme.bodyMedium!.copyWith(
-            color: isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
+            color: isDark
+                ? AppColors.darkErrorMainColor
+                : AppColors.lightErrorMainColor,
           );
         }
         return _textTheme.bodyMedium!.copyWith(
-          color: isDark ? AppColors.darkTextSecondaryColor : AppColors.lightTextSecondaryColor,
+          color: isDark
+              ? AppColors.darkTextSecondaryColor
+              : AppColors.lightTextSecondaryColor,
         );
       },
     ),
     hintStyle: _textTheme.bodyMedium,
     filled: true,
-    fillColor: isDark ? AppColors.darkAccentBackgroundColor : AppColors.lightAccentBackgroundColor,
+    fillColor: isDark
+        ? AppColors.darkAccentBackgroundColor
+        : AppColors.lightAccentBackgroundColor,
     errorMaxLines: 2,
     enabledBorder: OutlineInputBorder(
       borderRadius: const BorderRadius.all(Radius.circular(8.0)),
       borderSide: BorderSide(
-        color: isDark ? AppColors.darkAccentSecondBackgroundColor : AppColors.lightAccentSecondBackgroundColor,
+        color: isDark
+            ? AppColors.darkAccentSecondBackgroundColor
+            : AppColors.lightAccentSecondBackgroundColor,
       ),
     ),
     focusedBorder: OutlineInputBorder(
@@ -221,17 +239,22 @@ InputDecorationTheme _inputDecorationTheme(bool isDark) {
     errorBorder: OutlineInputBorder(
       borderRadius: const BorderRadius.all(Radius.circular(8.0)),
       borderSide: BorderSide(
-        color: isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
+        color: isDark
+            ? AppColors.darkErrorMainColor
+            : AppColors.lightErrorMainColor,
       ),
     ),
     focusedErrorBorder: OutlineInputBorder(
       borderRadius: const BorderRadius.all(Radius.circular(8.0)),
       borderSide: BorderSide(
-        color: isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
+        color: isDark
+            ? AppColors.darkErrorMainColor
+            : AppColors.lightErrorMainColor,
       ),
     ),
     errorStyle: _textTheme.labelSmall!.copyWith(
-      color: isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
+      color:
+          isDark ? AppColors.darkErrorMainColor : AppColors.lightErrorMainColor,
     ),
   );
 }
@@ -240,14 +263,20 @@ ElevatedButtonThemeData _elevatedButtonTheme(bool isDark) {
   return ElevatedButtonThemeData(
     style: ButtonStyle(
       minimumSize: const WidgetStatePropertyAll<Size>(Size.fromHeight(48)),
-      padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
+      padding: const WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
       overlayColor: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.hovered)) {
-            return (isDark ? _darkColorScheme : _lightColorScheme).onPrimary.withOpacity(0.08);
+            return (isDark ? _darkColorScheme : _lightColorScheme)
+                .onPrimary
+                .withOpacity(0.08);
           }
-          if (states.contains(WidgetState.focused) || states.contains(WidgetState.pressed)) {
-            return (isDark ? _darkColorScheme : _lightColorScheme).onPrimary.withOpacity(0.24);
+          if (states.contains(WidgetState.focused) ||
+              states.contains(WidgetState.pressed)) {
+            return (isDark ? _darkColorScheme : _lightColorScheme)
+                .onPrimary
+                .withOpacity(0.24);
           }
           return null;
         },
@@ -266,7 +295,8 @@ ElevatedButtonThemeData _elevatedButtonTheme(bool isDark) {
 
 final _textButtonTheme = TextButtonThemeData(
   style: ButtonStyle(
-    padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
+    padding: const WidgetStatePropertyAll(
+        EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
     splashFactory: NoSplash.splashFactory,
     textStyle: WidgetStatePropertyAll(_textTheme.titleSmall),
   ),
@@ -275,9 +305,12 @@ final _textButtonTheme = TextButtonThemeData(
 AppBarTheme _appBarTheme(bool isDark) {
   return AppBarTheme(
     elevation: 0,
-    backgroundColor: isDark ? AppColors.darkBackgroundColor : AppColors.lightBackgroundColor,
-    foregroundColor: isDark ? AppColors.darkTextColor : AppColors.lightTextColor,
-    surfaceTintColor: isDark ? AppColors.darkSurfaceColor : AppColors.lightSurfaceColor,
+    backgroundColor:
+        isDark ? AppColors.darkBackgroundColor : AppColors.lightBackgroundColor,
+    foregroundColor:
+        isDark ? AppColors.darkTextColor : AppColors.lightTextColor,
+    surfaceTintColor:
+        isDark ? AppColors.darkSurfaceColor : AppColors.lightSurfaceColor,
     titleTextStyle: _textTheme.titleMedium?.copyWith(
       color: isDark ? AppColors.darkTextColor : AppColors.lightTextColor,
     ),
@@ -288,10 +321,10 @@ AppBarTheme _appBarTheme(bool isDark) {
 
 ActionIconThemeData _actionIconTheme(bool isDark) {
   return ActionIconThemeData(
-    backButtonIconBuilder: (context) => SvgPicture.asset(
-      Assets.icons.icArrowLeft,
+    backButtonIconBuilder: (context) => Assets.icons.icArrowLeft.svg(
       colorFilter: ColorFilter.mode(
-        (isDark ? _darkAppColorsScheme : _lightAppColorsScheme).primaryTextColor,
+        (isDark ? _darkAppColorsScheme : _lightAppColorsScheme)
+            .primaryTextColor,
         BlendMode.srcIn,
       ),
     ),
@@ -300,9 +333,13 @@ ActionIconThemeData _actionIconTheme(bool isDark) {
 
 BottomNavigationBarThemeData _bottomNavigationBarTheme(bool isDark) {
   return BottomNavigationBarThemeData(
-    backgroundColor: isDark ? AppColors.darkAccentSecondBackgroundColor : AppColors.lightAccentSecondBackgroundColor,
-    selectedItemColor: isDark ? AppColors.darkPrimaryColor : AppColors.lightPrimaryColor,
-    unselectedItemColor: (isDark ? _darkAppColorsScheme : _lightAppColorsScheme).secondaryTextColor,
+    backgroundColor: isDark
+        ? AppColors.darkAccentSecondBackgroundColor
+        : AppColors.lightAccentSecondBackgroundColor,
+    selectedItemColor:
+        isDark ? AppColors.darkPrimaryColor : AppColors.lightPrimaryColor,
+    unselectedItemColor: (isDark ? _darkAppColorsScheme : _lightAppColorsScheme)
+        .secondaryTextColor,
     selectedLabelStyle: _appTypography.labelMediumBold,
     unselectedLabelStyle: _textTheme.labelMedium,
   );
@@ -312,15 +349,20 @@ OutlinedButtonThemeData _outlinedButtonTheme(bool isDark) {
   return OutlinedButtonThemeData(
     style: ButtonStyle(
       minimumSize: const WidgetStatePropertyAll<Size>(Size.fromHeight(48)),
-      padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
+      padding: const WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: 16, vertical: 12)),
       side: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.disabled)) {
             return BorderSide(
-                color: (isDark ? _darkAppColorsScheme : _lightAppColorsScheme).secondaryTextColor, width: 2);
+                color: (isDark ? _darkAppColorsScheme : _lightAppColorsScheme)
+                    .secondaryTextColor,
+                width: 2);
           }
           return BorderSide(
-              color: isDark ? AppColors.darkAccentSecondBackgroundColor : AppColors.lightAccentSecondBackgroundColor,
+              color: isDark
+                  ? AppColors.darkAccentSecondBackgroundColor
+                  : AppColors.lightAccentSecondBackgroundColor,
               width: 2);
         },
       ),
@@ -329,9 +371,11 @@ OutlinedButtonThemeData _outlinedButtonTheme(bool isDark) {
       foregroundColor: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.disabled)) {
-            return (isDark ? _darkAppColorsScheme : _lightAppColorsScheme).secondaryTextColor;
+            return (isDark ? _darkAppColorsScheme : _lightAppColorsScheme)
+                .secondaryTextColor;
           }
-          return (isDark ? _darkAppColorsScheme : _lightAppColorsScheme).primaryTextColor;
+          return (isDark ? _darkAppColorsScheme : _lightAppColorsScheme)
+              .primaryTextColor;
         },
       ),
       shape: const WidgetStatePropertyAll(
@@ -345,7 +389,9 @@ OutlinedButtonThemeData _outlinedButtonTheme(bool isDark) {
 
 ListTileThemeData _listTileTheme(bool isDark) {
   return ListTileThemeData(
-    tileColor: isDark ? AppColors.darkAccentBackgroundColor : AppColors.lightAccentBackgroundColor,
+    tileColor: isDark
+        ? AppColors.darkAccentBackgroundColor
+        : AppColors.lightAccentBackgroundColor,
     contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12),
@@ -359,7 +405,9 @@ ListTileThemeData _listTileTheme(bool isDark) {
 
 PopupMenuThemeData _popupMenuTheme(bool isDark) {
   return PopupMenuThemeData(
-    color: isDark ? AppColors.darkAccentSecondBackgroundColor : AppColors.lightAccentSecondBackgroundColor,
+    color: isDark
+        ? AppColors.darkAccentSecondBackgroundColor
+        : AppColors.lightAccentSecondBackgroundColor,
     textStyle: _textTheme.titleSmall?.copyWith(
       color: isDark ? AppColors.darkTextColor : AppColors.lightTextColor,
     ),
@@ -373,7 +421,9 @@ PopupMenuThemeData _popupMenuTheme(bool isDark) {
 
 DialogTheme _dialogTheme(bool isDark) {
   return DialogTheme(
-    backgroundColor: isDark ? AppColors.darkAccentSecondBackgroundColor : AppColors.lightAccentSecondBackgroundColor,
+    backgroundColor: isDark
+        ? AppColors.darkAccentSecondBackgroundColor
+        : AppColors.lightAccentSecondBackgroundColor,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8),
     ),

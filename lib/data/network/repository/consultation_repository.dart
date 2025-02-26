@@ -11,15 +11,15 @@ class ConsultationRepository extends BaseRepository {
   final ApiClient _apiClient;
   ConsultationRepository(this._apiClient);
 
-  Future<Either<Failure, List<Consultation>>> getAllConsultations() async {
+  Future<Either<FailureException, List<Consultation>>> getAllConsultations() async {
     return invokeRequest(() => _apiClient.getAllConsultations());
   }
 
-  Future<Either<Failure, List<Consultation>>> getPurchasedConsultations() async {
+  Future<Either<FailureException, List<Consultation>>> getPurchasedConsultations() async {
     return invokeRequest(() => _apiClient.getPurchasedConsultations());
   }
 
-  Future<Either<Failure, Consultation>> getConsultationById(String consultationId) async {
+  Future<Either<FailureException, Consultation>> getConsultationById(String consultationId) async {
     return invokeRequest(() => _apiClient.getConsultationById(consultationId));
   }
 }

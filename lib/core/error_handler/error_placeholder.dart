@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:help4kids_front/core/extension/context_extension.dart';
 
 class ErrorPlaceholder extends StatelessWidget {
   final String text;
