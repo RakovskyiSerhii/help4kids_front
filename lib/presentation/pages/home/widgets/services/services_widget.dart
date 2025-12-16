@@ -7,6 +7,7 @@ import 'package:help4kids_front/data/model/service.dart';
 import 'package:help4kids_front/data/model/service_category.dart';
 import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
+import 'package:help4kids_front/presentation/widgets/service_category_icon.dart';
 
 part 'mobile_services_widget.dart';
 
@@ -111,6 +112,14 @@ class ServiceItemWidget extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    // Icon at the top
+                    ServiceCategoryIcon(
+                      iconUrl: service.iconUrl,
+                      width: 48,
+                      height: 48,
+                      color: context.theme.colorScheme.primary,
+                    ),
+                    const SizedBox(height: 12),
                     Text(
                       service.name,
                       textAlign: TextAlign.center,
