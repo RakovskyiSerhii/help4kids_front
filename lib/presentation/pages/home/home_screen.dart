@@ -23,14 +23,22 @@ class HomeScreen extends StatelessWidget {
         child: BlocBuilder<HomeCubit, HomeState>(
           builder: (context, state) {
             if (state.loadingResult?.isProgress == true) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }
+
+            // If loading failed or landing data is still null, show a simple
+            // fallback instead of crashing on a null access.
+            if (state.landing == null) {
+              return const Center(
+                child: Text('Не вдалося завантажити дані. Спробуйте пізніше.'),
+              );
+            }
+
             return Column(
               children: [
-                HeaderWidget(
-                    serviceCategories: state.landing!.featuredServices),
+                HeaderWidget(serviceCategories: state.landing!.featuredServices),
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
@@ -164,8 +172,7 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 50),
                         ServicesWidget(list: state.landing!.featuredServices),
                         const SizedBox(height: 50),
-                        StaffWidget(
-                            featuredStaff: state.landing!.featuredStaff),
+                        StaffWidget(featuredStaff: state.landing!.featuredStaff),
                         const SizedBox(height: 50),
                         FooterWidget()
                       ],

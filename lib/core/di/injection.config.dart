@@ -34,6 +34,8 @@ import 'package:help4kids_front/data/network/repository/user_repository.dart'
     as _i617;
 import 'package:help4kids_front/presentation/pages/home/home_cubit.dart'
     as _i1048;
+import 'package:help4kids_front/presentation/pages/services/services_cubit.dart'
+    as _i1066;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -74,6 +76,10 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i1048.HomeCubit(gh<_i891.LandingRepository>()));
     gh.singleton<_i408.AppCubit>(
         () => _i408.AppCubit(gh<_i891.LandingRepository>()));
+    gh.factory<_i1066.ServicesCubit>(() => _i1066.ServicesCubit(
+          gh<_i494.ServiceRepository>(),
+          gh<_i408.AppCubit>(),
+        ));
     return this;
   }
 }

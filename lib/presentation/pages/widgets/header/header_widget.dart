@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:help4kids_front/core/routing/screens.dart';
 import 'package:help4kids_front/data/model/service_category.dart';
 import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
@@ -52,7 +54,9 @@ class HeaderWidget extends StatelessWidget {
                           (e) {
                             return PopupMenuItem(
                               child: Text(e.name),
-                              onTap: () {},
+                              onTap: () {
+                                context.goNamed(Screen.services);
+                              },
                             );
                           },
                         ).toList();

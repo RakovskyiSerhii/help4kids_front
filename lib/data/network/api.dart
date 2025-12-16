@@ -17,7 +17,7 @@ import 'package:help4kids_front/data/model/staff.dart';
 
 part 'api.g.dart';
 
-@RestApi(baseUrl: "https://api.help4kids.com")
+@RestApi()
 abstract class ApiClient {
   factory ApiClient(Dio dio, {String baseUrl}) = _ApiClient;
 
@@ -102,31 +102,31 @@ abstract class ApiClient {
   @POST("/api/staff/create")
   Future<void> createStaff(@Body() Map<String, dynamic> body);
 
-  @GET('/landing')
+  @GET('/api/landing')
   Future<LandingResponse> getLandingData();
 
   // General Info public endpoint
-  @GET('/general_info')
+  @GET('/api/general_info')
   Future<GeneralInfo> getGeneralInfo();
 
   // If needed, you can add admin endpoints for updating units, social contacts, finance info, and staff:
-  @GET('/general_info/units')
+  @GET('/api/general_info/units')
   Future<List<Unit>> getUnits();
   @PUT('/api/general_info/units')
   Future<void> updateUnits(@Body() Map<String, dynamic> body);
 
-  @GET('/general_info/social_contacts')
+  @GET('/api/general_info/social_contacts')
   Future<List<SocialContact>> getSocialContacts();
-  @PUT('/general_info/social_contacts')
+  @PUT('/api/general_info/social_contacts')
   Future<void> updateSocialContacts(@Body() Map<String, dynamic> body);
 
-  @GET('/general_info/finance_info')
+  @GET('/api/general_info/finance_info')
   Future<List<FinanceInfo>> getFinanceInfo();
   @PUT('/api/general_info/finance_info')
   Future<void> updateFinanceInfo(@Body() Map<String, dynamic> body);
 
-  @GET('/general_info/staff')
+  @GET('/api/general_info/staff')
   Future<List<Staff>> getStaff();
-  @PUT('/general_info/staff')
+  @PUT('/api/general_info/staff')
   Future<void> updateStaff(@Body() Map<String, dynamic> body);
 }

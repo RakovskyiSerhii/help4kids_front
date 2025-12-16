@@ -9,7 +9,7 @@ import 'package:help4kids_front/core/di/injection.dart';
 import 'package:help4kids_front/core/error_handler/error_handler.dart';
 import 'package:help4kids_front/core/routing/screens.dart';
 import 'package:help4kids_front/core/theme/app_colors.dart';
-import 'package:help4kids_front/generated//assets.gen.dart';
+import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/generated/l10n.dart';
 import 'package:help4kids_front/presentation/pages/articles/articles_screen.dart';
 import 'package:help4kids_front/presentation/pages/consultations/consultations_screen.dart';
@@ -86,7 +86,9 @@ class _AppWidgetState extends State<AppWidget> {
               child: BlocBuilder<AppCubit, AppState>(
                 builder: (context, state) {
                   if (state.loadingResult?.isProgress == true) {
-                    return CircularProgressIndicator();
+                    return const Center(
+                      child: CircularProgressIndicator(),
+                    );
                   }
                   return child ?? const SizedBox.shrink();
                 },

@@ -40,6 +40,17 @@ class FooterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(
       builder: (context, state) {
+        // Show a simple loader while general info is being fetched.
+        if (state.loadingResult?.isProgress == true) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        // If we still don't have general info (e.g. request failed), avoid
+        // crashing on null and render nothing.
+        if (state.info == null) {
+          return const SizedBox.shrink();
+        }
+
         return Column(
           children: [
             SizedBox(
@@ -90,25 +101,26 @@ class FooterWidget extends StatelessWidget {
                         },
                       ),
                     ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50),
-                    child: SizedWidget(builder: (context, type) {
-                      return switch (type) {
-                        SizeType.mobile => MobileFooterWidget(
-                            socialContacts: state.info!.socialContacts,
-                            financeInfo: state.info!.financeInfo.first,
-                          ),
-                        SizeType.tablet => TabletFooterWidget(
-                            socialContacts: state.info!.socialContacts,
-                            financeInfo: state.info!.financeInfo.first,
-                          ),
-                        SizeType.pc => PcFooterWidget(
-                            socialContacts: state.info!.socialContacts,
-                            financeInfo: state.info!.financeInfo.first,
-                          ),
-                      };
-                    }),
-                  ),
+                  if (state.info!.financeInfo.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 50),
+                      child: SizedWidget(builder: (context, type) {
+                        return switch (type) {
+                          SizeType.mobile => MobileFooterWidget(
+                              socialContacts: state.info!.socialContacts,
+                              financeInfo: state.info!.financeInfo.first,
+                            ),
+                          SizeType.tablet => TabletFooterWidget(
+                              socialContacts: state.info!.socialContacts,
+                              financeInfo: state.info!.financeInfo.first,
+                            ),
+                          SizeType.pc => PcFooterWidget(
+                              socialContacts: state.info!.socialContacts,
+                              financeInfo: state.info!.financeInfo.first,
+                            ),
+                        };
+                      }),
+                    ),
                   const SizedBox(height: 24),
                   SizedWidget(
                     builder: (context, type) {

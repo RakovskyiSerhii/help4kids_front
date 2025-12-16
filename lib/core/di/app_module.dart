@@ -28,7 +28,7 @@ abstract class AppModule {
 
   @lazySingleton
   ApiClient get apiClient =>
-      ApiClient(dio, baseUrl: 'http://localhost:8080/api/');
+      ApiClient(dio, baseUrl: 'http://localhost:8080');
 
   AuthorizationStateCarrier authorizationStateCarrier() => ValueCarrier(false);
 }

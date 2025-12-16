@@ -419,8 +419,8 @@ PopupMenuThemeData _popupMenuTheme(bool isDark) {
   );
 }
 
-DialogTheme _dialogTheme(bool isDark) {
-  return DialogTheme(
+DialogThemeData _dialogTheme(bool isDark) {
+  return DialogThemeData(
     backgroundColor: isDark
         ? AppColors.darkAccentSecondBackgroundColor
         : AppColors.lightAccentSecondBackgroundColor,

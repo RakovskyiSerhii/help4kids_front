@@ -825,7 +825,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/landing',
+          '/api/landing',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -858,7 +858,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/general_info',
+          '/api/general_info',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -891,7 +891,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/general_info/units',
+          '/api/general_info/units',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -952,7 +952,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/general_info/social_contacts',
+          '/api/general_info/social_contacts',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -1074,7 +1074,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/general_info/staff',
+          '/api/general_info/staff',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -1110,7 +1110,7 @@ class _ApiClient implements ApiClient {
     )
         .compose(
           _dio.options,
-          '/general_info/staff',
+          '/api/general_info/staff',
           queryParameters: queryParameters,
           data: _data,
         )

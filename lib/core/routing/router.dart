@@ -45,7 +45,7 @@ _appRouter(
           ],
         ),
         GoRoute(
-          path: '/verify',
+          path: '/verify/:token',
           name: 'verify',
           builder: (context, state) {
             final token = state.pathParameters['token'] ?? '';

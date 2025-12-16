@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:help4kids_front/data/model/consultation.dart';
+import 'package:help4kids_front/data/model/service_category.dart';
 
 import 'finance_info.dart';
 import 'social_contact.dart';
@@ -15,6 +16,7 @@ class GeneralInfo with _$GeneralInfo {
     required List<SocialContact> socialContacts,
     required List<FinanceInfo> financeInfo,
     required List<Consultation> consultations,
+    required List<ServiceCategory> categories,
   }) = _GeneralInfo;
 
   factory GeneralInfo.fromJson(Map<String, dynamic> json) =>
