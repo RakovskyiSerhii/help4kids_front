@@ -5,6 +5,8 @@ import 'package:help4kids_front/data/model/service_category.dart';
 import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
 
+import '../../../../core/go_router_extension.dart';
+
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key, required this.serviceCategories});
 
@@ -12,6 +14,12 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final router = GoRouter.of(context);
+    final location = router.location();
+    final theme = Theme.of(context);
+
+    final bool isHome = location == '/' || location.startsWith('/?');
+
     return Container(
       height: 60,
       width: double.infinity,
@@ -32,7 +40,19 @@ class HeaderWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          SizedBox(height: 40, child: Assets.icons.helpkidsLogo.image()),
+          // Logo navigates to the home page when tapped.
+          InkWell(
+            onTap: () {
+              if (!isHome) {
+                context.goNamed(Screen.initial);
+              }
+            },
+            borderRadius: BorderRadius.circular(4),
+            child: SizedBox(
+              height: 40,
+              child: Assets.icons.helpkidsLogo.image(),
+            ),
+          ),
           Spacer(),
           SizedWidget(
             builder: (context, type) {
@@ -42,28 +62,37 @@ class HeaderWidget extends StatelessWidget {
                     onPressed: () {},
                   ),
                 SizeType.pc || SizeType.tablet => Row(
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text('Головна'),
-                    ),
-                    PopupMenuButton(
-                      child: Text('Наші послуги'),
-                      itemBuilder: (context) {
-                        return serviceCategories.map(
-                          (e) {
-                            return PopupMenuItem(
-                              child: Text(e.name),
-                              onTap: () {
-                                context.goNamed(Screen.services);
+                    children: [
+                      TextButton(
+                        onPressed: isHome
+                            ? null
+                            : () {
+                                context.goNamed(Screen.initial);
                               },
-                            );
-                          },
-                        ).toList();
-                      },
-                    ),
-                  ],
-                )
+                        style: TextButton.styleFrom(
+                          foregroundColor: isHome
+                              ? theme.colorScheme.primary
+                              : theme.colorScheme.onSurface,
+                        ),
+                        child: const Text('Головна'),
+                      ),
+                      PopupMenuButton(
+                        child: Text('Наші послуги'),
+                        itemBuilder: (context) {
+                          return serviceCategories.map(
+                            (e) {
+                              return PopupMenuItem(
+                                child: Text(e.name),
+                                onTap: () {
+                                  context.goNamed(Screen.services);
+                                },
+                              );
+                            },
+                          ).toList();
+                        },
+                      ),
+                    ],
+                  )
               };
             },
           ),

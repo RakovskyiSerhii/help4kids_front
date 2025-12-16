@@ -17,7 +17,11 @@ _appRouter(
         GoRoute(
           path: '/services',
           name: Screen.services,
-          builder: (context, state) => const ServicesScreen(),
+          builder: (context, state) {
+            final initialCategoryId =
+                state.uri.queryParameters['categoryId'];
+            return ServicesScreen(initialCategoryId: initialCategoryId);
+          },
         ),
         GoRoute(
           path: '/articles',

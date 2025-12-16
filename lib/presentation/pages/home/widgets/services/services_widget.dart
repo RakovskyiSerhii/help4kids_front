@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:help4kids_front/core/extension/context_extension.dart';
+import 'package:help4kids_front/core/routing/screens.dart';
 import 'package:help4kids_front/core/theme/app_colors.dart';
 import 'package:help4kids_front/data/model/service.dart';
 import 'package:help4kids_front/data/model/service_category.dart';
@@ -71,60 +73,69 @@ class ServiceItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedWidget(builder: (context, type) {
-      final double kTitle;
-      final double kDescription;
+    return SizedWidget(
+      builder: (context, type) {
+        final double kTitle;
+        final double kDescription;
 
-      switch (type) {
-        case SizeType.mobile:
-          kTitle = 0.05;
-          kDescription = 0.035;
-          break;
-        case SizeType.tablet:
-          kTitle = 0.018;
-          kDescription = 0.015;
-          break;
-        case SizeType.pc:
-          kTitle = 0.018;
-          kDescription = 0.015;
-          break;
-      }
-      return ConstrainedBox(
-        constraints: BoxConstraints(minWidth: 350, minHeight: 200),
-        child: Material(
-          elevation: 5,
-          borderRadius: BorderRadius.circular(20),
-          child: InkWell(
-            onTap: () {},
+        switch (type) {
+          case SizeType.mobile:
+            kTitle = 0.05;
+            kDescription = 0.035;
+            break;
+          case SizeType.tablet:
+            kTitle = 0.018;
+            kDescription = 0.015;
+            break;
+          case SizeType.pc:
+            kTitle = 0.018;
+            kDescription = 0.015;
+            break;
+        }
+        return ConstrainedBox(
+          constraints: const BoxConstraints(minWidth: 350, minHeight: 200),
+          child: Material(
+            elevation: 5,
             borderRadius: BorderRadius.circular(20),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    service.name,
-                    textAlign: TextAlign.center,
-
-                    style: context.theme.textTheme.titleMedium?.copyWith(
-                      fontSize: MediaQuery.of(context).size.width * kTitle,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  if (service.description?.isNotEmpty == true)
+            child: InkWell(
+              onTap: () {
+                // Navigate to the services (pricing) page and pass selected category.
+                context.goNamed(
+                  Screen.services,
+                  queryParameters: {'categoryId': service.id},
+                );
+              },
+              borderRadius: BorderRadius.circular(20),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     Text(
-                      service.description!,
+                      service.name,
                       textAlign: TextAlign.center,
-                      style: context.theme.textTheme.bodyMedium?.copyWith(
-                        fontSize: MediaQuery.of(context).size.width * kDescription,
+                      style: context.theme.textTheme.titleMedium?.copyWith(
+                        fontSize:
+                            MediaQuery.of(context).size.width * kTitle,
                       ),
                     ),
-                ],
+                    const SizedBox(height: 8),
+                    if (service.description?.isNotEmpty == true)
+                      Text(
+                        service.description!,
+                        textAlign: TextAlign.center,
+                        style: context.theme.textTheme.bodyMedium?.copyWith(
+                              fontSize: MediaQuery.of(context).size.width *
+                                  kDescription,
+                            ),
+                      ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      );
-    },);
+        );
+      },
+    );
   }
 }
