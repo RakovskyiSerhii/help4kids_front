@@ -6,7 +6,7 @@ import 'package:help4kids_front/data/model/service_category.dart';
 part 'services_state.freezed.dart';
 
 @freezed
-class ServicesState with _$ServicesState {
+sealed class ServicesState with _$ServicesState {
   factory ServicesState({
     List<ServiceCategory>? categories,
     List<Service>? services,

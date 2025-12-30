@@ -3,7 +3,7 @@ part 'consultation_appointment.freezed.dart';
 part 'consultation_appointment.g.dart';
 
 @freezed
-class ConsultationAppointment with _$ConsultationAppointment {
+sealed class ConsultationAppointment with _$ConsultationAppointment {
   const factory ConsultationAppointment({
     required String id,
     required String consultationId,

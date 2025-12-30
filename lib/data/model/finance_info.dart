@@ -3,7 +3,7 @@ part 'finance_info.freezed.dart';
 part 'finance_info.g.dart';
 
 @freezed
-class FinanceInfo with _$FinanceInfo {
+sealed class FinanceInfo with _$FinanceInfo {
   const factory FinanceInfo({
     required String id,
     required String tNumber,

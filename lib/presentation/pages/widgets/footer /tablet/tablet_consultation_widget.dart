@@ -10,14 +10,14 @@ class TabletConsultationWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * .05),
-      child: ListView.separated(
-        itemBuilder: (context, index) {
-          return ConsultationItemWidget(consultation: consultations[index]);
-        },
-        separatorBuilder: (context, index) => const SizedBox(height: 10),
-        itemCount: consultations.length,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: consultations.map((consultation) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: ConsultationItemWidget(consultation: consultation),
+          );
+        }).toList(),
       ),
     );
   }

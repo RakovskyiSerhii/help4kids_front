@@ -6,9 +6,8 @@ part of 'article_category.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ArticleCategoryImpl _$$ArticleCategoryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ArticleCategoryImpl(
+_ArticleCategory _$ArticleCategoryFromJson(Map<String, dynamic> json) =>
+    _ArticleCategory(
       id: json['id'] as String,
       title: json['title'] as String,
       description: json['description'] as String?,
@@ -17,8 +16,7 @@ _$ArticleCategoryImpl _$$ArticleCategoryImplFromJson(
       updatedAt: DateTime.parse(json['updatedAt'] as String),
     );
 
-Map<String, dynamic> _$$ArticleCategoryImplToJson(
-        _$ArticleCategoryImpl instance) =>
+Map<String, dynamic> _$ArticleCategoryToJson(_ArticleCategory instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,

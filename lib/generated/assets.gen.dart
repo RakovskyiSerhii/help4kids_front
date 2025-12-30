@@ -1,3 +1,5 @@
+// dart format width=80
+
 /// GENERATED CODE - DO NOT MODIFY BY HAND
 /// *****************************************************
 ///  FlutterGen
@@ -5,7 +7,7 @@
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
-// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
+// ignore_for_file: deprecated_member_use,directives_ordering,implicit_dynamic_list_literal,unnecessary_import
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -799,263 +801,263 @@ class $AssetsFlagsGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        ad,
-        ae,
-        af,
-        ag,
-        ai,
-        al,
-        am,
-        an,
-        ao,
-        aq,
-        ar,
-        as,
-        at,
-        au,
-        aw,
-        ax,
-        az,
-        ba,
-        bb,
-        bd,
-        be,
-        bf,
-        bg,
-        bh,
-        bi,
-        bj,
-        bl,
-        bm,
-        bn,
-        bo,
-        bq,
-        br,
-        bs,
-        bt,
-        bv,
-        bw,
-        by,
-        bz,
-        cDo,
-        cIn,
-        cIs,
-        ca,
-        cc,
-        cd,
-        cf,
-        cg,
-        ch,
-        ci,
-        ck,
-        cl,
-        cm,
-        cn,
-        co,
-        cr,
-        cu,
-        cv,
-        cw,
-        cx,
-        cy,
-        cz,
-        de,
-        dj,
-        dk,
-        dm,
-        dz,
-        ec,
-        ee,
-        eg,
-        eh,
-        er,
-        es,
-        et,
-        eu,
-        fi,
-        fj,
-        fk,
-        fm,
-        fo,
-        fr,
-        ga,
-        gbEng,
-        gbNir,
-        gbSct,
-        gbWls,
-        gb,
-        gd,
-        ge,
-        gf,
-        gg,
-        gh,
-        gi,
-        gl,
-        gm,
-        gn,
-        gp,
-        gq,
-        gr,
-        gs,
-        gt,
-        gu,
-        gw,
-        gy,
-        hk,
-        hm,
-        hn,
-        hr,
-        ht,
-        hu,
-        id,
-        ie,
-        il,
-        im,
-        io,
-        iq,
-        ir,
-        it,
-        je,
-        jm,
-        jo,
-        jp,
-        ke,
-        kg,
-        kh,
-        ki,
-        km,
-        kn,
-        kp,
-        kr,
-        kw,
-        ky,
-        kz,
-        la,
-        lb,
-        lc,
-        li,
-        lk,
-        lr,
-        ls,
-        lt,
-        lu,
-        lv,
-        ly,
-        ma,
-        mc,
-        md,
-        me,
-        mf,
-        mg,
-        mh,
-        mk,
-        ml,
-        mm,
-        mn,
-        mo,
-        mp,
-        mq,
-        mr,
-        ms,
-        mt,
-        mu,
-        mv,
-        mw,
-        mx,
-        my,
-        mz,
-        na,
-        nc,
-        ne,
-        nf,
-        ng,
-        ni,
-        nl,
-        no,
-        np,
-        nr,
-        nu,
-        nz,
-        om,
-        pa,
-        pe,
-        pf,
-        pg,
-        ph,
-        pk,
-        pl,
-        pm,
-        pn,
-        pr,
-        ps,
-        pt,
-        pw,
-        py,
-        qa,
-        re,
-        ro,
-        rs,
-        ru,
-        rw,
-        sa,
-        sb,
-        sc,
-        sd,
-        se,
-        sg,
-        sh,
-        si,
-        sj,
-        sk,
-        sl,
-        sm,
-        sn,
-        so,
-        sr,
-        ss,
-        st,
-        sv,
-        sx,
-        sy,
-        sz,
-        tc,
-        td,
-        tf,
-        tg,
-        th,
-        tj,
-        tk,
-        tl,
-        tm,
-        tn,
-        to,
-        tr,
-        tt,
-        tv,
-        tw,
-        tz,
-        ua,
-        ug,
-        um,
-        us,
-        uy,
-        uz,
-        va,
-        vc,
-        ve,
-        vg,
-        vi,
-        vn,
-        vu,
-        wf,
-        ws,
-        xk,
-        ye,
-        yt,
-        za,
-        zm,
-        zw
-      ];
+    ad,
+    ae,
+    af,
+    ag,
+    ai,
+    al,
+    am,
+    an,
+    ao,
+    aq,
+    ar,
+    as,
+    at,
+    au,
+    aw,
+    ax,
+    az,
+    ba,
+    bb,
+    bd,
+    be,
+    bf,
+    bg,
+    bh,
+    bi,
+    bj,
+    bl,
+    bm,
+    bn,
+    bo,
+    bq,
+    br,
+    bs,
+    bt,
+    bv,
+    bw,
+    by,
+    bz,
+    cDo,
+    cIn,
+    cIs,
+    ca,
+    cc,
+    cd,
+    cf,
+    cg,
+    ch,
+    ci,
+    ck,
+    cl,
+    cm,
+    cn,
+    co,
+    cr,
+    cu,
+    cv,
+    cw,
+    cx,
+    cy,
+    cz,
+    de,
+    dj,
+    dk,
+    dm,
+    dz,
+    ec,
+    ee,
+    eg,
+    eh,
+    er,
+    es,
+    et,
+    eu,
+    fi,
+    fj,
+    fk,
+    fm,
+    fo,
+    fr,
+    ga,
+    gbEng,
+    gbNir,
+    gbSct,
+    gbWls,
+    gb,
+    gd,
+    ge,
+    gf,
+    gg,
+    gh,
+    gi,
+    gl,
+    gm,
+    gn,
+    gp,
+    gq,
+    gr,
+    gs,
+    gt,
+    gu,
+    gw,
+    gy,
+    hk,
+    hm,
+    hn,
+    hr,
+    ht,
+    hu,
+    id,
+    ie,
+    il,
+    im,
+    io,
+    iq,
+    ir,
+    it,
+    je,
+    jm,
+    jo,
+    jp,
+    ke,
+    kg,
+    kh,
+    ki,
+    km,
+    kn,
+    kp,
+    kr,
+    kw,
+    ky,
+    kz,
+    la,
+    lb,
+    lc,
+    li,
+    lk,
+    lr,
+    ls,
+    lt,
+    lu,
+    lv,
+    ly,
+    ma,
+    mc,
+    md,
+    me,
+    mf,
+    mg,
+    mh,
+    mk,
+    ml,
+    mm,
+    mn,
+    mo,
+    mp,
+    mq,
+    mr,
+    ms,
+    mt,
+    mu,
+    mv,
+    mw,
+    mx,
+    my,
+    mz,
+    na,
+    nc,
+    ne,
+    nf,
+    ng,
+    ni,
+    nl,
+    no,
+    np,
+    nr,
+    nu,
+    nz,
+    om,
+    pa,
+    pe,
+    pf,
+    pg,
+    ph,
+    pk,
+    pl,
+    pm,
+    pn,
+    pr,
+    ps,
+    pt,
+    pw,
+    py,
+    qa,
+    re,
+    ro,
+    rs,
+    ru,
+    rw,
+    sa,
+    sb,
+    sc,
+    sd,
+    se,
+    sg,
+    sh,
+    si,
+    sj,
+    sk,
+    sl,
+    sm,
+    sn,
+    so,
+    sr,
+    ss,
+    st,
+    sv,
+    sx,
+    sy,
+    sz,
+    tc,
+    td,
+    tf,
+    tg,
+    th,
+    tj,
+    tk,
+    tl,
+    tm,
+    tn,
+    to,
+    tr,
+    tt,
+    tv,
+    tw,
+    tz,
+    ua,
+    ug,
+    um,
+    us,
+    uy,
+    uz,
+    va,
+    vc,
+    ve,
+    vg,
+    vi,
+    vn,
+    vu,
+    wf,
+    ws,
+    xk,
+    ye,
+    yt,
+    za,
+    zm,
+    zw,
+  ];
 }
 
 class $AssetsIconsGen {
@@ -1073,6 +1075,13 @@ class $AssetsIconsGen {
   SvgGenImage get icArrowRight =>
       const SvgGenImage('assets/icons/ic_arrow_right.svg');
 
+  /// File path: assets/icons/ic_brain.svg
+  SvgGenImage get icBrain => const SvgGenImage('assets/icons/ic_brain.svg');
+
+  /// File path: assets/icons/ic_document.svg
+  SvgGenImage get icDocument =>
+      const SvgGenImage('assets/icons/ic_document.svg');
+
   /// File path: assets/icons/ic_eye_closed.svg
   SvgGenImage get icEyeClosed =>
       const SvgGenImage('assets/icons/ic_eye_closed.svg');
@@ -1081,9 +1090,42 @@ class $AssetsIconsGen {
   SvgGenImage get icEyeOpen =>
       const SvgGenImage('assets/icons/ic_eye_open.svg');
 
+  /// File path: assets/icons/ic_flask.svg
+  SvgGenImage get icFlask => const SvgGenImage('assets/icons/ic_flask.svg');
+
+  /// File path: assets/icons/ic_heart_pulse.svg
+  SvgGenImage get icHeartPulse =>
+      const SvgGenImage('assets/icons/ic_heart_pulse.svg');
+
+  /// File path: assets/icons/ic_monitor.svg
+  SvgGenImage get icMonitor => const SvgGenImage('assets/icons/ic_monitor.svg');
+
+  /// File path: assets/icons/ic_stethoscope.svg
+  SvgGenImage get icStethoscope =>
+      const SvgGenImage('assets/icons/ic_stethoscope.svg');
+
+  /// File path: assets/icons/ic_sun.svg
+  SvgGenImage get icSun => const SvgGenImage('assets/icons/ic_sun.svg');
+
+  /// File path: assets/icons/ic_syringe.svg
+  SvgGenImage get icSyringe => const SvgGenImage('assets/icons/ic_syringe.svg');
+
   /// List of all assets
-  List<dynamic> get values =>
-      [helpkidsLogo, icArrowLeft, icArrowRight, icEyeClosed, icEyeOpen];
+  List<dynamic> get values => [
+    helpkidsLogo,
+    icArrowLeft,
+    icArrowRight,
+    icBrain,
+    icDocument,
+    icEyeClosed,
+    icEyeOpen,
+    icFlask,
+    icHeartPulse,
+    icMonitor,
+    icStethoscope,
+    icSun,
+    icSyringe,
+  ];
 }
 
 class $AssetsImagesGen {
@@ -1110,8 +1152,13 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/rakovska.jpg');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [evtushenko, fronBanner, frontImageDescr, ponomarenko, rakovska];
+  List<AssetGenImage> get values => [
+    evtushenko,
+    fronBanner,
+    frontImageDescr,
+    ponomarenko,
+    rakovska,
+  ];
 }
 
 class Assets {
@@ -1128,12 +1175,14 @@ class AssetGenImage {
     this._assetName, {
     this.size,
     this.flavors = const {},
+    this.animation,
   });
 
   final String _assetName;
 
   final Size? size;
   final Set<String> flavors;
+  final AssetGenImageAnimation? animation;
 
   Image image({
     Key? key,
@@ -1188,15 +1237,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;
@@ -1204,18 +1246,24 @@ class AssetGenImage {
   String get keyName => _assetName;
 }
 
-class SvgGenImage {
-  const SvgGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = false;
+class AssetGenImageAnimation {
+  const AssetGenImageAnimation({
+    required this.isAnimation,
+    required this.duration,
+    required this.frames,
+  });
 
-  const SvgGenImage.vec(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = true;
+  final bool isAnimation;
+  final Duration duration;
+  final int frames;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = false;
+
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = true;
 
   final String _assetName;
   final Size? size;
@@ -1236,6 +1284,7 @@ class SvgGenImage {
     String? semanticsLabel,
     bool excludeFromSemantics = false,
     _svg.SvgTheme? theme,
+    _svg.ColorMapper? colorMapper,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
@@ -1255,6 +1304,7 @@ class SvgGenImage {
         assetBundle: bundle,
         packageName: package,
         theme: theme,
+        colorMapper: colorMapper,
       );
     }
     return _svg.SvgPicture(
@@ -1269,7 +1319,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter: colorFilter ??
+      colorFilter:
+          colorFilter ??
           (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,

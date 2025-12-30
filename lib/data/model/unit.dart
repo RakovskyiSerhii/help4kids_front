@@ -3,7 +3,7 @@ part 'unit.freezed.dart';
 part 'unit.g.dart';
 
 @freezed
-class Unit with _$Unit {
+sealed class Unit with _$Unit {
   const factory Unit({
     required String id,
     required String address,

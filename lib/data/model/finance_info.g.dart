@@ -6,16 +6,15 @@ part of 'finance_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FinanceInfoImpl _$$FinanceInfoImplFromJson(Map<String, dynamic> json) =>
-    _$FinanceInfoImpl(
-      id: json['id'] as String,
-      tNumber: json['tNumber'] as String,
-      name: json['name'] as String,
-      officialAddress: json['officialAddress'] as String,
-      actualAddress: json['actualAddress'] as String,
-    );
+_FinanceInfo _$FinanceInfoFromJson(Map<String, dynamic> json) => _FinanceInfo(
+  id: json['id'] as String,
+  tNumber: json['tNumber'] as String,
+  name: json['name'] as String,
+  officialAddress: json['officialAddress'] as String,
+  actualAddress: json['actualAddress'] as String,
+);
 
-Map<String, dynamic> _$$FinanceInfoImplToJson(_$FinanceInfoImpl instance) =>
+Map<String, dynamic> _$FinanceInfoToJson(_FinanceInfo instance) =>
     <String, dynamic>{
       'id': instance.id,
       'tNumber': instance.tNumber,

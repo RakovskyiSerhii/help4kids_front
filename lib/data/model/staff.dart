@@ -5,7 +5,7 @@ part 'staff.freezed.dart';
 part 'staff.g.dart';
 
 @freezed
-class Staff with _$Staff {
+sealed class Staff with _$Staff {
   const factory Staff({
     required String id,
     required String name,

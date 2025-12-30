@@ -9,7 +9,7 @@ part 'landing.freezed.dart';
 part 'landing.g.dart';
 
 @freezed
-class LandingResponse with _$LandingResponse {
+sealed class LandingResponse with _$LandingResponse {
   const factory LandingResponse({
     required List<ServiceCategory> featuredServices,
     required List<Staff> featuredStaff,

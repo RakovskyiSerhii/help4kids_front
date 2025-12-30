@@ -3,7 +3,7 @@ part 'social_contact.freezed.dart';
 part 'social_contact.g.dart';
 
 @freezed
-class SocialContact with _$SocialContact {
+sealed class SocialContact with _$SocialContact {
   const factory SocialContact({
     required String id,
     required String url,

@@ -22,9 +22,9 @@ class ServiceCategoryIcon extends StatelessWidget {
   /// Constructs the full URL for the icon
   String _getIconUrl(String iconName) {
     // Base URL should match the ApiClient baseUrl
-    // This is set in AppModule to 'http://localhost:8080'
+    // This is set in AppModule to 'http://173.242.53.114:8080'
     // In production, consider storing this in a config file
-    const baseUrl = 'http://localhost:8080';
+    const baseUrl = 'http://173.242.53.114:8080';
     return '$baseUrl/api/icons/$iconName';
   }
 

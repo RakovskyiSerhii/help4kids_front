@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,2239 +9,920 @@ part of 'failure.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$Failure {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Failure);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'Failure()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FailureCopyWith<$Res> {
-  factory $FailureCopyWith(Failure value, $Res Function(Failure) then) =
-      _$FailureCopyWithImpl<$Res, Failure>;
+class $FailureCopyWith<$Res>  {
+$FailureCopyWith(Failure _, $Res Function(Failure) __);
 }
 
-/// @nodoc
-class _$FailureCopyWithImpl<$Res, $Val extends Failure>
-    implements $FailureCopyWith<$Res> {
-  _$FailureCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [Failure].
+extension FailurePatterns on Failure {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _Connection value)?  connection,TResult Function( _ApiError value)?  apiError,TResult Function( _ManualError value)?  manualError,TResult Function( _Payment value)?  payment,TResult Function( _Fatal value)?  fatal,TResult Function( _RemovedUser value)?  removedUser,TResult Function( _Timeout value)?  timeout,TResult Function( _Unauthorized value)?  unauthorized,TResult Function( _NotFound value)?  notFound,TResult Function( _BadRequest value)?  badRequest,TResult Function( _Unknown value)?  unknown,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Connection() when connection != null:
+return connection(_that);case _ApiError() when apiError != null:
+return apiError(_that);case _ManualError() when manualError != null:
+return manualError(_that);case _Payment() when payment != null:
+return payment(_that);case _Fatal() when fatal != null:
+return fatal(_that);case _RemovedUser() when removedUser != null:
+return removedUser(_that);case _Timeout() when timeout != null:
+return timeout(_that);case _Unauthorized() when unauthorized != null:
+return unauthorized(_that);case _NotFound() when notFound != null:
+return notFound(_that);case _BadRequest() when badRequest != null:
+return badRequest(_that);case _Unknown() when unknown != null:
+return unknown(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _Connection value)  connection,required TResult Function( _ApiError value)  apiError,required TResult Function( _ManualError value)  manualError,required TResult Function( _Payment value)  payment,required TResult Function( _Fatal value)  fatal,required TResult Function( _RemovedUser value)  removedUser,required TResult Function( _Timeout value)  timeout,required TResult Function( _Unauthorized value)  unauthorized,required TResult Function( _NotFound value)  notFound,required TResult Function( _BadRequest value)  badRequest,required TResult Function( _Unknown value)  unknown,}){
+final _that = this;
+switch (_that) {
+case _Connection():
+return connection(_that);case _ApiError():
+return apiError(_that);case _ManualError():
+return manualError(_that);case _Payment():
+return payment(_that);case _Fatal():
+return fatal(_that);case _RemovedUser():
+return removedUser(_that);case _Timeout():
+return timeout(_that);case _Unauthorized():
+return unauthorized(_that);case _NotFound():
+return notFound(_that);case _BadRequest():
+return badRequest(_that);case _Unknown():
+return unknown(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _Connection value)?  connection,TResult? Function( _ApiError value)?  apiError,TResult? Function( _ManualError value)?  manualError,TResult? Function( _Payment value)?  payment,TResult? Function( _Fatal value)?  fatal,TResult? Function( _RemovedUser value)?  removedUser,TResult? Function( _Timeout value)?  timeout,TResult? Function( _Unauthorized value)?  unauthorized,TResult? Function( _NotFound value)?  notFound,TResult? Function( _BadRequest value)?  badRequest,TResult? Function( _Unknown value)?  unknown,}){
+final _that = this;
+switch (_that) {
+case _Connection() when connection != null:
+return connection(_that);case _ApiError() when apiError != null:
+return apiError(_that);case _ManualError() when manualError != null:
+return manualError(_that);case _Payment() when payment != null:
+return payment(_that);case _Fatal() when fatal != null:
+return fatal(_that);case _RemovedUser() when removedUser != null:
+return removedUser(_that);case _Timeout() when timeout != null:
+return timeout(_that);case _Unauthorized() when unauthorized != null:
+return unauthorized(_that);case _NotFound() when notFound != null:
+return notFound(_that);case _BadRequest() when badRequest != null:
+return badRequest(_that);case _Unknown() when unknown != null:
+return unknown(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message)?  connection,TResult Function( String? message,  int? code)?  apiError,TResult Function( String? message)?  manualError,TResult Function()?  payment,TResult Function( String message)?  fatal,TResult Function( String message)?  removedUser,TResult Function( String message)?  timeout,TResult Function( String message)?  unauthorized,TResult Function( String message)?  notFound,TResult Function( String? message)?  badRequest,TResult Function( String message)?  unknown,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Connection() when connection != null:
+return connection(_that.message);case _ApiError() when apiError != null:
+return apiError(_that.message,_that.code);case _ManualError() when manualError != null:
+return manualError(_that.message);case _Payment() when payment != null:
+return payment();case _Fatal() when fatal != null:
+return fatal(_that.message);case _RemovedUser() when removedUser != null:
+return removedUser(_that.message);case _Timeout() when timeout != null:
+return timeout(_that.message);case _Unauthorized() when unauthorized != null:
+return unauthorized(_that.message);case _NotFound() when notFound != null:
+return notFound(_that.message);case _BadRequest() when badRequest != null:
+return badRequest(_that.message);case _Unknown() when unknown != null:
+return unknown(_that.message);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message)  connection,required TResult Function( String? message,  int? code)  apiError,required TResult Function( String? message)  manualError,required TResult Function()  payment,required TResult Function( String message)  fatal,required TResult Function( String message)  removedUser,required TResult Function( String message)  timeout,required TResult Function( String message)  unauthorized,required TResult Function( String message)  notFound,required TResult Function( String? message)  badRequest,required TResult Function( String message)  unknown,}) {final _that = this;
+switch (_that) {
+case _Connection():
+return connection(_that.message);case _ApiError():
+return apiError(_that.message,_that.code);case _ManualError():
+return manualError(_that.message);case _Payment():
+return payment();case _Fatal():
+return fatal(_that.message);case _RemovedUser():
+return removedUser(_that.message);case _Timeout():
+return timeout(_that.message);case _Unauthorized():
+return unauthorized(_that.message);case _NotFound():
+return notFound(_that.message);case _BadRequest():
+return badRequest(_that.message);case _Unknown():
+return unknown(_that.message);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message)?  connection,TResult? Function( String? message,  int? code)?  apiError,TResult? Function( String? message)?  manualError,TResult? Function()?  payment,TResult? Function( String message)?  fatal,TResult? Function( String message)?  removedUser,TResult? Function( String message)?  timeout,TResult? Function( String message)?  unauthorized,TResult? Function( String message)?  notFound,TResult? Function( String? message)?  badRequest,TResult? Function( String message)?  unknown,}) {final _that = this;
+switch (_that) {
+case _Connection() when connection != null:
+return connection(_that.message);case _ApiError() when apiError != null:
+return apiError(_that.message,_that.code);case _ManualError() when manualError != null:
+return manualError(_that.message);case _Payment() when payment != null:
+return payment();case _Fatal() when fatal != null:
+return fatal(_that.message);case _RemovedUser() when removedUser != null:
+return removedUser(_that.message);case _Timeout() when timeout != null:
+return timeout(_that.message);case _Unauthorized() when unauthorized != null:
+return unauthorized(_that.message);case _NotFound() when notFound != null:
+return notFound(_that.message);case _BadRequest() when badRequest != null:
+return badRequest(_that.message);case _Unknown() when unknown != null:
+return unknown(_that.message);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$ConnectionImplCopyWith<$Res> {
-  factory _$$ConnectionImplCopyWith(
-          _$ConnectionImpl value, $Res Function(_$ConnectionImpl) then) =
-      __$$ConnectionImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$ConnectionImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$ConnectionImpl>
-    implements _$$ConnectionImplCopyWith<$Res> {
-  __$$ConnectionImplCopyWithImpl(
-      _$ConnectionImpl _value, $Res Function(_$ConnectionImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$ConnectionImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ConnectionImpl implements _Connection {
-  const _$ConnectionImpl({this.message = "Connection error"});
-
-  @override
-  @JsonKey()
-  final String message;
-
-  @override
-  String toString() {
-    return 'Failure.connection(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ConnectionImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ConnectionImplCopyWith<_$ConnectionImpl> get copyWith =>
-      __$$ConnectionImplCopyWithImpl<_$ConnectionImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return connection(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return connection?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (connection != null) {
-      return connection(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return connection(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return connection?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (connection != null) {
-      return connection(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Connection implements Failure {
-  const factory _Connection({final String message}) = _$ConnectionImpl;
-
-  String get message;
-
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ConnectionImplCopyWith<_$ConnectionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ApiErrorImplCopyWith<$Res> {
-  factory _$$ApiErrorImplCopyWith(
-          _$ApiErrorImpl value, $Res Function(_$ApiErrorImpl) then) =
-      __$$ApiErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String? message, int? code});
-}
-
-/// @nodoc
-class __$$ApiErrorImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$ApiErrorImpl>
-    implements _$$ApiErrorImplCopyWith<$Res> {
-  __$$ApiErrorImplCopyWithImpl(
-      _$ApiErrorImpl _value, $Res Function(_$ApiErrorImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-    Object? code = freezed,
-  }) {
-    return _then(_$ApiErrorImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$ApiErrorImpl implements _ApiError {
-  const _$ApiErrorImpl({this.message, this.code});
 
-  @override
-  final String? message;
-  @override
-  final int? code;
+class _Connection implements Failure {
+  const _Connection({this.message = "Connection error"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.apiError(message: $message, code: $code)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ApiErrorImpl &&
-            (identical(other.message, message) || other.message == message) &&
-            (identical(other.code, code) || other.code == code));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ConnectionCopyWith<_Connection> get copyWith => __$ConnectionCopyWithImpl<_Connection>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message, code);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
-      __$$ApiErrorImplCopyWithImpl<_$ApiErrorImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return apiError(message, code);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return apiError?.call(message, code);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (apiError != null) {
-      return apiError(message, code);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return apiError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return apiError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (apiError != null) {
-      return apiError(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Connection&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _ApiError implements Failure {
-  const factory _ApiError({final String? message, final int? code}) =
-      _$ApiErrorImpl;
 
-  String? get message;
-  int? get code;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.connection(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$ManualErrorImplCopyWith<$Res> {
-  factory _$$ManualErrorImplCopyWith(
-          _$ManualErrorImpl value, $Res Function(_$ManualErrorImpl) then) =
-      __$$ManualErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String? message});
+abstract mixin class _$ConnectionCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$ConnectionCopyWith(_Connection value, $Res Function(_Connection) _then) = __$ConnectionCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$ConnectionCopyWithImpl<$Res>
+    implements _$ConnectionCopyWith<$Res> {
+  __$ConnectionCopyWithImpl(this._self, this._then);
+
+  final _Connection _self;
+  final $Res Function(_Connection) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_Connection(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$ManualErrorImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$ManualErrorImpl>
-    implements _$$ManualErrorImplCopyWith<$Res> {
-  __$$ManualErrorImplCopyWithImpl(
-      _$ManualErrorImpl _value, $Res Function(_$ManualErrorImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$ManualErrorImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$ManualErrorImpl implements _ManualError {
-  const _$ManualErrorImpl({this.message});
 
-  @override
-  final String? message;
+class _ApiError implements Failure {
+  const _ApiError({this.message, this.code});
+  
 
-  @override
-  String toString() {
-    return 'Failure.manualError(message: $message)';
-  }
+ final  String? message;
+ final  int? code;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ManualErrorImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ApiErrorCopyWith<_ApiError> get copyWith => __$ApiErrorCopyWithImpl<_ApiError>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ManualErrorImplCopyWith<_$ManualErrorImpl> get copyWith =>
-      __$$ManualErrorImplCopyWithImpl<_$ManualErrorImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return manualError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return manualError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (manualError != null) {
-      return manualError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return manualError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return manualError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (manualError != null) {
-      return manualError(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApiError&&(identical(other.message, message) || other.message == message)&&(identical(other.code, code) || other.code == code));
 }
 
-abstract class _ManualError implements Failure {
-  const factory _ManualError({final String? message}) = _$ManualErrorImpl;
 
-  String? get message;
+@override
+int get hashCode => Object.hash(runtimeType,message,code);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ManualErrorImplCopyWith<_$ManualErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.apiError(message: $message, code: $code)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$PaymentImplCopyWith<$Res> {
-  factory _$$PaymentImplCopyWith(
-          _$PaymentImpl value, $Res Function(_$PaymentImpl) then) =
-      __$$PaymentImplCopyWithImpl<$Res>;
+abstract mixin class _$ApiErrorCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$ApiErrorCopyWith(_ApiError value, $Res Function(_ApiError) _then) = __$ApiErrorCopyWithImpl;
+@useResult
+$Res call({
+ String? message, int? code
+});
+
+
+
+
+}
+/// @nodoc
+class __$ApiErrorCopyWithImpl<$Res>
+    implements _$ApiErrorCopyWith<$Res> {
+  __$ApiErrorCopyWithImpl(this._self, this._then);
+
+  final _ApiError _self;
+  final $Res Function(_ApiError) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = freezed,Object? code = freezed,}) {
+  return _then(_ApiError(
+message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String?,code: freezed == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-class __$$PaymentImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$PaymentImpl>
-    implements _$$PaymentImplCopyWith<$Res> {
-  __$$PaymentImplCopyWithImpl(
-      _$PaymentImpl _value, $Res Function(_$PaymentImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$PaymentImpl implements _Payment {
-  const _$PaymentImpl();
 
-  @override
-  String toString() {
-    return 'Failure.payment()';
-  }
+class _ManualError implements Failure {
+  const _ManualError({this.message});
+  
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PaymentImpl);
-  }
+ final  String? message;
 
-  @override
-  int get hashCode => runtimeType.hashCode;
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ManualErrorCopyWith<_ManualError> get copyWith => __$ManualErrorCopyWithImpl<_ManualError>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return payment();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return payment?.call();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (payment != null) {
-      return payment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return payment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return payment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (payment != null) {
-      return payment(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ManualError&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _Payment implements Failure {
-  const factory _Payment() = _$PaymentImpl;
+
+@override
+int get hashCode => Object.hash(runtimeType,message);
+
+@override
+String toString() {
+  return 'Failure.manualError(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$FatalImplCopyWith<$Res> {
-  factory _$$FatalImplCopyWith(
-          _$FatalImpl value, $Res Function(_$FatalImpl) then) =
-      __$$FatalImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$ManualErrorCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$ManualErrorCopyWith(_ManualError value, $Res Function(_ManualError) _then) = __$ManualErrorCopyWithImpl;
+@useResult
+$Res call({
+ String? message
+});
+
+
+
+
+}
+/// @nodoc
+class __$ManualErrorCopyWithImpl<$Res>
+    implements _$ManualErrorCopyWith<$Res> {
+  __$ManualErrorCopyWithImpl(this._self, this._then);
+
+  final _ManualError _self;
+  final $Res Function(_ManualError) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = freezed,}) {
+  return _then(_ManualError(
+message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-class __$$FatalImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$FatalImpl>
-    implements _$$FatalImplCopyWith<$Res> {
-  __$$FatalImplCopyWithImpl(
-      _$FatalImpl _value, $Res Function(_$FatalImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$FatalImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$FatalImpl implements _Fatal {
-  const _$FatalImpl({this.message = "A fatal error occurred"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _Payment implements Failure {
+  const _Payment();
+  
 
-  @override
-  String toString() {
-    return 'Failure.fatal(message: $message)';
-  }
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FatalImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FatalImplCopyWith<_$FatalImpl> get copyWith =>
-      __$$FatalImplCopyWithImpl<_$FatalImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return fatal(message);
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return fatal?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (fatal != null) {
-      return fatal(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return fatal(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return fatal?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (fatal != null) {
-      return fatal(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Payment);
 }
 
-abstract class _Fatal implements Failure {
-  const factory _Fatal({final String message}) = _$FatalImpl;
 
-  String get message;
+@override
+int get hashCode => runtimeType.hashCode;
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FatalImplCopyWith<_$FatalImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.payment()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class _Fatal implements Failure {
+  const _Fatal({this.message = "A fatal error occurred"});
+  
+
+@JsonKey() final  String message;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FatalCopyWith<_Fatal> get copyWith => __$FatalCopyWithImpl<_Fatal>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Fatal&&(identical(other.message, message) || other.message == message));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,message);
+
+@override
+String toString() {
+  return 'Failure.fatal(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$RemovedUserImplCopyWith<$Res> {
-  factory _$$RemovedUserImplCopyWith(
-          _$RemovedUserImpl value, $Res Function(_$RemovedUserImpl) then) =
-      __$$RemovedUserImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$FatalCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$FatalCopyWith(_Fatal value, $Res Function(_Fatal) _then) = __$FatalCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$FatalCopyWithImpl<$Res>
+    implements _$FatalCopyWith<$Res> {
+  __$FatalCopyWithImpl(this._self, this._then);
+
+  final _Fatal _self;
+  final $Res Function(_Fatal) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_Fatal(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$RemovedUserImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$RemovedUserImpl>
-    implements _$$RemovedUserImplCopyWith<$Res> {
-  __$$RemovedUserImplCopyWithImpl(
-      _$RemovedUserImpl _value, $Res Function(_$RemovedUserImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$RemovedUserImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$RemovedUserImpl implements _RemovedUser {
-  const _$RemovedUserImpl({this.message = "User has been removed"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _RemovedUser implements Failure {
+  const _RemovedUser({this.message = "User has been removed"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.removedUser(message: $message)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RemovedUserImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RemovedUserCopyWith<_RemovedUser> get copyWith => __$RemovedUserCopyWithImpl<_RemovedUser>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RemovedUserImplCopyWith<_$RemovedUserImpl> get copyWith =>
-      __$$RemovedUserImplCopyWithImpl<_$RemovedUserImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return removedUser(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return removedUser?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (removedUser != null) {
-      return removedUser(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return removedUser(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return removedUser?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (removedUser != null) {
-      return removedUser(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemovedUser&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _RemovedUser implements Failure {
-  const factory _RemovedUser({final String message}) = _$RemovedUserImpl;
 
-  String get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RemovedUserImplCopyWith<_$RemovedUserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.removedUser(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$TimeoutImplCopyWith<$Res> {
-  factory _$$TimeoutImplCopyWith(
-          _$TimeoutImpl value, $Res Function(_$TimeoutImpl) then) =
-      __$$TimeoutImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$RemovedUserCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$RemovedUserCopyWith(_RemovedUser value, $Res Function(_RemovedUser) _then) = __$RemovedUserCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$RemovedUserCopyWithImpl<$Res>
+    implements _$RemovedUserCopyWith<$Res> {
+  __$RemovedUserCopyWithImpl(this._self, this._then);
+
+  final _RemovedUser _self;
+  final $Res Function(_RemovedUser) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_RemovedUser(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$TimeoutImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$TimeoutImpl>
-    implements _$$TimeoutImplCopyWith<$Res> {
-  __$$TimeoutImplCopyWithImpl(
-      _$TimeoutImpl _value, $Res Function(_$TimeoutImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$TimeoutImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$TimeoutImpl implements _Timeout {
-  const _$TimeoutImpl({this.message = "Request timed out"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _Timeout implements Failure {
+  const _Timeout({this.message = "Request timed out"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.timeout(message: $message)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TimeoutImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$TimeoutCopyWith<_Timeout> get copyWith => __$TimeoutCopyWithImpl<_Timeout>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TimeoutImplCopyWith<_$TimeoutImpl> get copyWith =>
-      __$$TimeoutImplCopyWithImpl<_$TimeoutImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return timeout(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return timeout?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (timeout != null) {
-      return timeout(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return timeout(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return timeout?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (timeout != null) {
-      return timeout(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Timeout&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _Timeout implements Failure {
-  const factory _Timeout({final String message}) = _$TimeoutImpl;
 
-  String get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TimeoutImplCopyWith<_$TimeoutImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.timeout(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$UnauthorizedImplCopyWith<$Res> {
-  factory _$$UnauthorizedImplCopyWith(
-          _$UnauthorizedImpl value, $Res Function(_$UnauthorizedImpl) then) =
-      __$$UnauthorizedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$TimeoutCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$TimeoutCopyWith(_Timeout value, $Res Function(_Timeout) _then) = __$TimeoutCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$TimeoutCopyWithImpl<$Res>
+    implements _$TimeoutCopyWith<$Res> {
+  __$TimeoutCopyWithImpl(this._self, this._then);
+
+  final _Timeout _self;
+  final $Res Function(_Timeout) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_Timeout(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$UnauthorizedImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$UnauthorizedImpl>
-    implements _$$UnauthorizedImplCopyWith<$Res> {
-  __$$UnauthorizedImplCopyWithImpl(
-      _$UnauthorizedImpl _value, $Res Function(_$UnauthorizedImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$UnauthorizedImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$UnauthorizedImpl implements _Unauthorized {
-  const _$UnauthorizedImpl({this.message = "Unauthorized"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _Unauthorized implements Failure {
+  const _Unauthorized({this.message = "Unauthorized"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.unauthorized(message: $message)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnauthorizedImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UnauthorizedCopyWith<_Unauthorized> get copyWith => __$UnauthorizedCopyWithImpl<_Unauthorized>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnauthorizedImplCopyWith<_$UnauthorizedImpl> get copyWith =>
-      __$$UnauthorizedImplCopyWithImpl<_$UnauthorizedImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return unauthorized(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return unauthorized?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unauthorized != null) {
-      return unauthorized(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return unauthorized(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return unauthorized?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unauthorized != null) {
-      return unauthorized(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Unauthorized&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _Unauthorized implements Failure {
-  const factory _Unauthorized({final String message}) = _$UnauthorizedImpl;
 
-  String get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnauthorizedImplCopyWith<_$UnauthorizedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.unauthorized(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$NotFoundImplCopyWith<$Res> {
-  factory _$$NotFoundImplCopyWith(
-          _$NotFoundImpl value, $Res Function(_$NotFoundImpl) then) =
-      __$$NotFoundImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$UnauthorizedCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$UnauthorizedCopyWith(_Unauthorized value, $Res Function(_Unauthorized) _then) = __$UnauthorizedCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$UnauthorizedCopyWithImpl<$Res>
+    implements _$UnauthorizedCopyWith<$Res> {
+  __$UnauthorizedCopyWithImpl(this._self, this._then);
+
+  final _Unauthorized _self;
+  final $Res Function(_Unauthorized) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_Unauthorized(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$NotFoundImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$NotFoundImpl>
-    implements _$$NotFoundImplCopyWith<$Res> {
-  __$$NotFoundImplCopyWithImpl(
-      _$NotFoundImpl _value, $Res Function(_$NotFoundImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$NotFoundImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$NotFoundImpl implements _NotFound {
-  const _$NotFoundImpl({this.message = "Resource not found"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _NotFound implements Failure {
+  const _NotFound({this.message = "Resource not found"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.notFound(message: $message)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotFoundImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotFoundCopyWith<_NotFound> get copyWith => __$NotFoundCopyWithImpl<_NotFound>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      __$$NotFoundImplCopyWithImpl<_$NotFoundImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return notFound(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return notFound?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return notFound(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return notFound?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotFound&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _NotFound implements Failure {
-  const factory _NotFound({final String message}) = _$NotFoundImpl;
 
-  String get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.notFound(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$BadRequestImplCopyWith<$Res> {
-  factory _$$BadRequestImplCopyWith(
-          _$BadRequestImpl value, $Res Function(_$BadRequestImpl) then) =
-      __$$BadRequestImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String? message});
+abstract mixin class _$NotFoundCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$NotFoundCopyWith(_NotFound value, $Res Function(_NotFound) _then) = __$NotFoundCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotFoundCopyWithImpl<$Res>
+    implements _$NotFoundCopyWith<$Res> {
+  __$NotFoundCopyWithImpl(this._self, this._then);
+
+  final _NotFound _self;
+  final $Res Function(_NotFound) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_NotFound(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$BadRequestImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$BadRequestImpl>
-    implements _$$BadRequestImplCopyWith<$Res> {
-  __$$BadRequestImplCopyWithImpl(
-      _$BadRequestImpl _value, $Res Function(_$BadRequestImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$BadRequestImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$BadRequestImpl implements _BadRequest {
-  const _$BadRequestImpl({this.message});
 
-  @override
-  final String? message;
+class _BadRequest implements Failure {
+  const _BadRequest({this.message});
+  
 
-  @override
-  String toString() {
-    return 'Failure.badRequest(message: $message)';
-  }
+ final  String? message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BadRequestImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$BadRequestCopyWith<_BadRequest> get copyWith => __$BadRequestCopyWithImpl<_BadRequest>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      __$$BadRequestImplCopyWithImpl<_$BadRequestImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return badRequest(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return badRequest?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return badRequest(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return badRequest?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BadRequest&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _BadRequest implements Failure {
-  const factory _BadRequest({final String? message}) = _$BadRequestImpl;
 
-  String? get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.badRequest(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$UnknownImplCopyWith<$Res> {
-  factory _$$UnknownImplCopyWith(
-          _$UnknownImpl value, $Res Function(_$UnknownImpl) then) =
-      __$$UnknownImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract mixin class _$BadRequestCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$BadRequestCopyWith(_BadRequest value, $Res Function(_BadRequest) _then) = __$BadRequestCopyWithImpl;
+@useResult
+$Res call({
+ String? message
+});
+
+
+
+
+}
+/// @nodoc
+class __$BadRequestCopyWithImpl<$Res>
+    implements _$BadRequestCopyWith<$Res> {
+  __$BadRequestCopyWithImpl(this._self, this._then);
+
+  final _BadRequest _self;
+  final $Res Function(_BadRequest) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = freezed,}) {
+  return _then(_BadRequest(
+message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-class __$$UnknownImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$UnknownImpl>
-    implements _$$UnknownImplCopyWith<$Res> {
-  __$$UnknownImplCopyWithImpl(
-      _$UnknownImpl _value, $Res Function(_$UnknownImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$UnknownImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$UnknownImpl implements _Unknown {
-  const _$UnknownImpl({this.message = "Unknown error"});
 
-  @override
-  @JsonKey()
-  final String message;
+class _Unknown implements Failure {
+  const _Unknown({this.message = "Unknown error"});
+  
 
-  @override
-  String toString() {
-    return 'Failure.unknown(message: $message)';
-  }
+@JsonKey() final  String message;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnknownImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UnknownCopyWith<_Unknown> get copyWith => __$UnknownCopyWithImpl<_Unknown>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnknownImplCopyWith<_$UnknownImpl> get copyWith =>
-      __$$UnknownImplCopyWithImpl<_$UnknownImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) connection,
-    required TResult Function(String? message, int? code) apiError,
-    required TResult Function(String? message) manualError,
-    required TResult Function() payment,
-    required TResult Function(String message) fatal,
-    required TResult Function(String message) removedUser,
-    required TResult Function(String message) timeout,
-    required TResult Function(String message) unauthorized,
-    required TResult Function(String message) notFound,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String message) unknown,
-  }) {
-    return unknown(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? connection,
-    TResult? Function(String? message, int? code)? apiError,
-    TResult? Function(String? message)? manualError,
-    TResult? Function()? payment,
-    TResult? Function(String message)? fatal,
-    TResult? Function(String message)? removedUser,
-    TResult? Function(String message)? timeout,
-    TResult? Function(String message)? unauthorized,
-    TResult? Function(String message)? notFound,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String message)? unknown,
-  }) {
-    return unknown?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? connection,
-    TResult Function(String? message, int? code)? apiError,
-    TResult Function(String? message)? manualError,
-    TResult Function()? payment,
-    TResult Function(String message)? fatal,
-    TResult Function(String message)? removedUser,
-    TResult Function(String message)? timeout,
-    TResult Function(String message)? unauthorized,
-    TResult Function(String message)? notFound,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String message)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Connection value) connection,
-    required TResult Function(_ApiError value) apiError,
-    required TResult Function(_ManualError value) manualError,
-    required TResult Function(_Payment value) payment,
-    required TResult Function(_Fatal value) fatal,
-    required TResult Function(_RemovedUser value) removedUser,
-    required TResult Function(_Timeout value) timeout,
-    required TResult Function(_Unauthorized value) unauthorized,
-    required TResult Function(_NotFound value) notFound,
-    required TResult Function(_BadRequest value) badRequest,
-    required TResult Function(_Unknown value) unknown,
-  }) {
-    return unknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Connection value)? connection,
-    TResult? Function(_ApiError value)? apiError,
-    TResult? Function(_ManualError value)? manualError,
-    TResult? Function(_Payment value)? payment,
-    TResult? Function(_Fatal value)? fatal,
-    TResult? Function(_RemovedUser value)? removedUser,
-    TResult? Function(_Timeout value)? timeout,
-    TResult? Function(_Unauthorized value)? unauthorized,
-    TResult? Function(_NotFound value)? notFound,
-    TResult? Function(_BadRequest value)? badRequest,
-    TResult? Function(_Unknown value)? unknown,
-  }) {
-    return unknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Connection value)? connection,
-    TResult Function(_ApiError value)? apiError,
-    TResult Function(_ManualError value)? manualError,
-    TResult Function(_Payment value)? payment,
-    TResult Function(_Fatal value)? fatal,
-    TResult Function(_RemovedUser value)? removedUser,
-    TResult Function(_Timeout value)? timeout,
-    TResult Function(_Unauthorized value)? unauthorized,
-    TResult Function(_NotFound value)? notFound,
-    TResult Function(_BadRequest value)? badRequest,
-    TResult Function(_Unknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Unknown&&(identical(other.message, message) || other.message == message));
 }
 
-abstract class _Unknown implements Failure {
-  const factory _Unknown({final String message}) = _$UnknownImpl;
 
-  String get message;
+@override
+int get hashCode => Object.hash(runtimeType,message);
 
-  /// Create a copy of Failure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnknownImplCopyWith<_$UnknownImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'Failure.unknown(message: $message)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UnknownCopyWith<$Res> implements $FailureCopyWith<$Res> {
+  factory _$UnknownCopyWith(_Unknown value, $Res Function(_Unknown) _then) = __$UnknownCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
+
+
+
+
+}
+/// @nodoc
+class __$UnknownCopyWithImpl<$Res>
+    implements _$UnknownCopyWith<$Res> {
+  __$UnknownCopyWithImpl(this._self, this._then);
+
+  final _Unknown _self;
+  final $Res Function(_Unknown) _then;
+
+/// Create a copy of Failure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(_Unknown(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

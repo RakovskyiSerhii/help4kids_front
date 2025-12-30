@@ -37,16 +37,18 @@ _appRouter(
           path: '/consultations',
           name: Screen.consultations,
           builder: (context, state) => const ConsultationsScreen(),
-          routes: [
-            GoRoute(
-              path: ':consultationId',
-              name: Screen.consultationDetail,
-              builder: (context, state) {
-                final consultationId = state.pathParameters['consultationId']!;
-                return ConsultationDetailScreen(id: consultationId,);
-              },
-            ),
-          ],
+        ),
+        GoRoute(
+          path: '/consultation',
+          name: Screen.consultationDetail,
+          builder: (context, state) {
+            final consultationId = state.uri.queryParameters['id'];
+            if (consultationId == null || consultationId.isEmpty) {
+              // Redirect to consultations list if no ID provided
+              return const ConsultationsScreen();
+            }
+            return ConsultationDetailScreen(id: consultationId);
+          },
         ),
         GoRoute(
           path: '/verify/:token',

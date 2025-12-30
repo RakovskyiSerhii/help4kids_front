@@ -16,21 +16,13 @@ import 'package:help4kids_front/presentation/pages/widgets/footer%20/widgets/uni
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
 
 part 'mobile/mobile_consultation_widget.dart';
-
 part 'mobile/mobile_footer_widget.dart';
-
 part 'mobile/mobile_units_widget.dart';
-
 part 'pc/pc_consultation_widget.dart';
-
 part 'pc/pc_footer_widget.dart';
-
 part 'pc/pc_units_widget.dart';
-
 part 'tablet/tablet_consultation_widget.dart';
-
 part 'tablet/tablet_footer_widget.dart';
-
 part 'tablet/tablet_units_widget.dart';
 
 class FooterWidget extends StatelessWidget {
@@ -61,7 +53,9 @@ class FooterWidget extends StatelessWidget {
                 height: 50,
                 fit: BoxFit.fill,
                 colorFilter: ColorFilter.mode(
-                    context.theme.primaryColor, BlendMode.srcIn),
+                  context.theme.primaryColor,
+                  BlendMode.srcIn,
+                ),
               ),
             ),
             Container(
@@ -75,12 +69,15 @@ class FooterWidget extends StatelessWidget {
                       child: SizedWidget(
                         builder: (context, type) {
                           return switch (type) {
-                            SizeType.mobile =>
-                              MobileUnitsWidget(units: state.info!.units),
-                            SizeType.tablet =>
-                              TabletUnitsWidget(units: state.info!.units),
-                            SizeType.pc =>
-                              PcUnitsWidget(units: state.info!.units),
+                            SizeType.mobile => MobileUnitsWidget(
+                              units: state.info!.units,
+                            ),
+                            SizeType.tablet => TabletUnitsWidget(
+                              units: state.info!.units,
+                            ),
+                            SizeType.pc => PcUnitsWidget(
+                              units: state.info!.units,
+                            ),
                           };
                         },
                       ),
@@ -92,62 +89,66 @@ class FooterWidget extends StatelessWidget {
                         builder: (context, type) {
                           return switch (type) {
                             SizeType.mobile => MobileConsultationWidget(
-                                consultations: state.info!.consultations),
+                              consultations: state.info!.consultations,
+                            ),
                             SizeType.tablet => TabletConsultationWidget(
-                                consultations: state.info!.consultations),
+                              consultations: state.info!.consultations,
+                            ),
                             SizeType.pc => PcConsultationWidget(
-                                consultations: state.info!.consultations),
+                              consultations: state.info!.consultations,
+                            ),
                           };
                         },
                       ),
                     ),
-                  if (state.info!.financeInfo.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: SizedWidget(builder: (context, type) {
+                  Padding(
+                    padding: const EdgeInsets.only(top: 50),
+                    child: SizedWidget(
+                      builder: (context, type) {
                         return switch (type) {
                           SizeType.mobile => MobileFooterWidget(
-                              socialContacts: state.info!.socialContacts,
-                              financeInfo: state.info!.financeInfo.first,
-                            ),
+                            socialContacts: state.info!.socialContacts,
+                            financeInfo: state.info!.financeInfo.first,
+                          ),
                           SizeType.tablet => TabletFooterWidget(
-                              socialContacts: state.info!.socialContacts,
-                              financeInfo: state.info!.financeInfo.first,
-                            ),
+                            socialContacts: state.info!.socialContacts,
+                            financeInfo: state.info!.financeInfo.first,
+                          ),
                           SizeType.pc => PcFooterWidget(
-                              socialContacts: state.info!.socialContacts,
-                              financeInfo: state.info!.financeInfo.first,
-                            ),
+                            socialContacts: state.info!.socialContacts,
+                            financeInfo: state.info!.financeInfo.first,
+                          ),
                         };
-                      }),
+                      },
                     ),
+                  ),
                   const SizedBox(height: 24),
                   SizedWidget(
                     builder: (context, type) {
                       return switch (type) {
                         SizeType.mobile => SizedBox(),
                         SizeType.tablet || SizeType.pc => Container(
-                            height: 30,
-                            color: context.theme.colorScheme.secondary,
-                            width: double.infinity,
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                            child: Row(
-                              children: [
-                                Text(
-                                  '© 2020 – ${DateTime.now().year} help4kids.com.ua',
-                                  style: context.theme.textTheme.titleSmall,
-                                ),
-                                Spacer(),
-                                Text(
-                                  'У разі надзвичайної ситуації дзвоніть 103',
-                                  style: context.theme.textTheme.titleSmall,
-                                ),
-                              ],
-                            ),
+                          height: 30,
+                          color: context.theme.colorScheme.secondary,
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Row(
+                            children: [
+                              Text(
+                                '© 2020 – ${DateTime.now().year} help4kids.com.ua',
+                                style: context.theme.textTheme.titleSmall,
+                              ),
+                              Spacer(),
+                              Text(
+                                'У разі надзвичайної ситуації дзвоніть 103',
+                                style: context.theme.textTheme.titleSmall,
+                              ),
+                            ],
                           ),
+                        ),
                       };
                     },
-                  )
+                  ),
                 ],
               ),
             ),

@@ -2,10 +2,10 @@ part of '../footer_widget.dart';
 
 class MobileFooterWidget extends StatelessWidget {
   const MobileFooterWidget(
-      {super.key, required this.socialContacts, required this.financeInfo});
+      {super.key, required this.socialContacts, this.financeInfo});
 
   final List<SocialContact> socialContacts;
-  final FinanceInfo financeInfo;
+  final FinanceInfo? financeInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,10 @@ class MobileFooterWidget extends StatelessWidget {
       child: Column(
         children: [
           SocialContactWidget(socialContacts: socialContacts),
-          const SizedBox(height: 50),
-          FinanceInfoWidget(financeInfo: financeInfo),
+          if (financeInfo != null) ...[
+            const SizedBox(height: 50),
+            FinanceInfoWidget(financeInfo: financeInfo!),
+          ],
         ],
       ),
     );

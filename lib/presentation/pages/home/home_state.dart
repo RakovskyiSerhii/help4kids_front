@@ -5,7 +5,7 @@ import 'package:help4kids_front/data/model/landing.dart';
 part 'home_state.freezed.dart';
 
 @freezed
-class HomeState with _$HomeState {
+sealed class HomeState with _$HomeState {
   factory HomeState({
     Result? loadingResult,
     LandingResponse? landing,

@@ -1,4 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -32,6 +33,8 @@ import 'package:help4kids_front/data/network/repository/service_repository.dart'
     as _i494;
 import 'package:help4kids_front/data/network/repository/user_repository.dart'
     as _i617;
+import 'package:help4kids_front/presentation/pages/consultations/details/consultation_detail_cubit.dart'
+    as _i62;
 import 'package:help4kids_front/presentation/pages/home/home_cubit.dart'
     as _i1048;
 import 'package:help4kids_front/presentation/pages/services/services_cubit.dart'
@@ -39,47 +42,60 @@ import 'package:help4kids_front/presentation/pages/services/services_cubit.dart'
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
-// initializes the registration of main-scope dependencies inside of GetIt
+  // initializes the registration of main-scope dependencies inside of GetIt
   _i174.GetIt init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i526.GetItHelper(
-      this,
-      environment,
-      environmentFilter,
-    );
+    final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final appModule = _$AppModule();
     gh.factory<_i281.AuthorizationStateCarrier>(
-        () => appModule.authorizationStateCarrier());
+      () => appModule.authorizationStateCarrier(),
+    );
     gh.lazySingleton<_i361.Dio>(() => appModule.dio);
     gh.lazySingleton<_i65.ApiClient>(() => appModule.apiClient);
-    gh.factory<_i104.AuthStateHandlerBloc>(() =>
-        _i104.AuthStateHandlerBloc(gh<_i281.AuthorizationStateCarrier>()));
-    gh.lazySingleton<_i184.ConsultationRepository>(
-        () => _i184.ConsultationRepository(gh<_i65.ApiClient>()));
-    gh.lazySingleton<_i494.ServiceRepository>(
-        () => _i494.ServiceRepository(gh<_i65.ApiClient>()));
-    gh.lazySingleton<_i891.LandingRepository>(
-        () => _i891.LandingRepository(gh<_i65.ApiClient>()));
-    gh.lazySingleton<_i961.OrderRepository>(
-        () => _i961.OrderRepository(gh<_i65.ApiClient>()));
+    gh.factory<_i104.AuthStateHandlerBloc>(
+      () => _i104.AuthStateHandlerBloc(gh<_i281.AuthorizationStateCarrier>()),
+    );
     gh.lazySingleton<_i615.ArticleRepository>(
-        () => _i615.ArticleRepository(gh<_i65.ApiClient>()));
+      () => _i615.ArticleRepository(gh<_i65.ApiClient>()),
+    );
     gh.lazySingleton<_i891.ConsultationAppointmentRepository>(
-        () => _i891.ConsultationAppointmentRepository(gh<_i65.ApiClient>()));
-    gh.lazySingleton<_i617.UserRepository>(
-        () => _i617.UserRepository(gh<_i65.ApiClient>()));
+      () => _i891.ConsultationAppointmentRepository(gh<_i65.ApiClient>()),
+    );
+    gh.lazySingleton<_i184.ConsultationRepository>(
+      () => _i184.ConsultationRepository(gh<_i65.ApiClient>()),
+    );
     gh.lazySingleton<_i251.CourseRepository>(
-        () => _i251.CourseRepository(gh<_i65.ApiClient>()));
+      () => _i251.CourseRepository(gh<_i65.ApiClient>()),
+    );
+    gh.lazySingleton<_i891.LandingRepository>(
+      () => _i891.LandingRepository(gh<_i65.ApiClient>()),
+    );
+    gh.lazySingleton<_i961.OrderRepository>(
+      () => _i961.OrderRepository(gh<_i65.ApiClient>()),
+    );
+    gh.lazySingleton<_i494.ServiceRepository>(
+      () => _i494.ServiceRepository(gh<_i65.ApiClient>()),
+    );
+    gh.lazySingleton<_i617.UserRepository>(
+      () => _i617.UserRepository(gh<_i65.ApiClient>()),
+    );
+    gh.factory<_i62.ConsultationDetailCubit>(
+      () => _i62.ConsultationDetailCubit(gh<_i184.ConsultationRepository>()),
+    );
     gh.factory<_i1048.HomeCubit>(
-        () => _i1048.HomeCubit(gh<_i891.LandingRepository>()));
+      () => _i1048.HomeCubit(gh<_i891.LandingRepository>()),
+    );
     gh.singleton<_i408.AppCubit>(
-        () => _i408.AppCubit(gh<_i891.LandingRepository>()));
-    gh.factory<_i1066.ServicesCubit>(() => _i1066.ServicesCubit(
-          gh<_i494.ServiceRepository>(),
-          gh<_i408.AppCubit>(),
-        ));
+      () => _i408.AppCubit(gh<_i891.LandingRepository>()),
+    );
+    gh.factory<_i1066.ServicesCubit>(
+      () => _i1066.ServicesCubit(
+        gh<_i494.ServiceRepository>(),
+        gh<_i408.AppCubit>(),
+      ),
+    );
     return this;
   }
 }

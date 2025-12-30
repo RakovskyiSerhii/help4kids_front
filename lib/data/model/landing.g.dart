@@ -6,9 +6,8 @@ part of 'landing.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LandingResponseImpl _$$LandingResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LandingResponseImpl(
+_LandingResponse _$LandingResponseFromJson(Map<String, dynamic> json) =>
+    _LandingResponse(
       featuredServices: (json['featuredServices'] as List<dynamic>)
           .map((e) => ServiceCategory.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -23,8 +22,7 @@ _$LandingResponseImpl _$$LandingResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$LandingResponseImplToJson(
-        _$LandingResponseImpl instance) =>
+Map<String, dynamic> _$LandingResponseToJson(_LandingResponse instance) =>
     <String, dynamic>{
       'featuredServices': instance.featuredServices,
       'featuredStaff': instance.featuredStaff,

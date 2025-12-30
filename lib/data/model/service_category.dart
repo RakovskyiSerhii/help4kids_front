@@ -5,7 +5,7 @@ part 'service_category.freezed.dart';
 part 'service_category.g.dart';
 
 @freezed
-class ServiceCategory with _$ServiceCategory {
+sealed class ServiceCategory with _$ServiceCategory {
   factory ServiceCategory({
     required String id,
     required String name,

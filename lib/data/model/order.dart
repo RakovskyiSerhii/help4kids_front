@@ -6,7 +6,7 @@ enum ServiceType { course, consultation, service }
 enum OrderStatus { pending, paid, failed }
 
 @freezed
-class Order with _$Order {
+sealed class Order with _$Order {
   const factory Order({
     required String id,
     required String userId,

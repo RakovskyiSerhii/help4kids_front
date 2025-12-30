@@ -4,11 +4,11 @@ class TabletFooterWidget extends StatelessWidget {
   const TabletFooterWidget({
     super.key,
     required this.socialContacts,
-    required this.financeInfo,
+    this.financeInfo,
   });
 
   final List<SocialContact> socialContacts;
-  final FinanceInfo financeInfo;
+  final FinanceInfo? financeInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +20,12 @@ class TabletFooterWidget extends StatelessWidget {
           Expanded(
             child: SocialContactWidget(socialContacts: socialContacts),
           ),
-          Spacer(),
-          Expanded(
-            child: FinanceInfoWidget(financeInfo: financeInfo),
-          ),
+          if (financeInfo != null) ...[
+            Spacer(),
+            Expanded(
+              child: FinanceInfoWidget(financeInfo: financeInfo!),
+            ),
+          ],
         ],
       ),
     );

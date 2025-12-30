@@ -10,7 +10,7 @@ part 'general_info.freezed.dart';
 part 'general_info.g.dart';
 
 @freezed
-class GeneralInfo with _$GeneralInfo {
+sealed class GeneralInfo with _$GeneralInfo {
   const factory GeneralInfo({
     required List<Unit> units,
     required List<SocialContact> socialContacts,
