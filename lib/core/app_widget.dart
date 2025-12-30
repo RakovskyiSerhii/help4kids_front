@@ -19,6 +19,8 @@ import 'package:help4kids_front/presentation/pages/home/home_screen.dart';
 import 'package:help4kids_front/presentation/pages/profile/profile_screen.dart';
 import 'package:help4kids_front/presentation/pages/services/services_screen.dart';
 import 'package:help4kids_front/presentation/pages/verify_email/verify_email_page.dart';
+import 'package:help4kids_front/presentation/pages/maintenance/maintenance_screen.dart';
+import 'package:help4kids_front/core/maintenance/maintenance_service.dart';
 
 part 'routing/router.dart';
 

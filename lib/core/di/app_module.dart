@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:help4kids_front/core/config/app_config.dart';
 import 'package:help4kids_front/core/value_carrier.dart';
 import 'package:help4kids_front/data/network/api.dart';
 import 'package:injectable/injectable.dart';
@@ -15,20 +16,24 @@ abstract class AppModule {
     //     ..badCertificateCallback =
     //         (X509Certificate cert, String host, int port) => true;
     // };
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+    
+    // Only add debug logger in development mode
+    if (AppConfig.enableDebugLogging) {
+      dio.interceptors.add(PrettyDioLogger(
+          requestHeader: true,
+          requestBody: true,
+          responseBody: true,
+          responseHeader: false,
+          error: true,
+          compact: true,
+          maxWidth: 90));
+    }
     return dio;
   }
 
   @lazySingleton
   ApiClient get apiClient =>
-      ApiClient(dio, baseUrl: 'http://173.242.53.114:8080');
+      ApiClient(dio, baseUrl: AppConfig.apiBaseUrl);
 
   AuthorizationStateCarrier authorizationStateCarrier() => ValueCarrier(false);
 }
