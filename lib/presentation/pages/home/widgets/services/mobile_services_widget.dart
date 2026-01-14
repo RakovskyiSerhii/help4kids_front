@@ -11,14 +11,20 @@ class MobileServicesWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: 16,
       ),
-      child: ListView.separated(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        separatorBuilder: (context, index) => const SizedBox(height: 16),
-        itemCount: list.length,
-        itemBuilder: (context, index) {
-          return ServiceItemWidget(service: list[index]);
-        },
+      child: Column(
+        children: [
+          ListView.separated(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            separatorBuilder: (context, index) => const SizedBox(height: 16),
+            itemCount: list.length,
+            itemBuilder: (context, index) {
+              return ServiceItemWidget(service: list[index]);
+            },
+          ),
+          const SizedBox(height: 16),
+          const ViewAllServicesWidget(),
+        ],
       ),
     );
   }

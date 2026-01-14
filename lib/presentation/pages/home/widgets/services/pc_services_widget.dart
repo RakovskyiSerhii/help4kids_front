@@ -20,8 +20,11 @@ class PcServicesWidget extends StatelessWidget {
           mainAxisSpacing: 16,
           childAspectRatio: 1,
         ),
-        itemCount: list.length,
+        itemCount: list.length + 1,
         itemBuilder: (context, index) {
+          if (index == list.length) {
+            return const ViewAllServicesWidget();
+          }
           return ServiceItemWidget(service: list[index]);
         },
       ),

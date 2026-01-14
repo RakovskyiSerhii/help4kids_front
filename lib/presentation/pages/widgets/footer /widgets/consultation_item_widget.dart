@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:help4kids_front/core/extension/context_extension.dart';
-import 'package:help4kids_front/core/routing/screens.dart';
 import 'package:help4kids_front/data/model/consultation.dart';
 
 class ConsultationItemWidget extends StatelessWidget {
@@ -35,10 +34,8 @@ class ConsultationItemWidget extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            context.goNamed(
-              Screen.consultationDetail,
-              queryParameters: {'id': consultation.id},
-            );
+            // Always use go() to navigate, which will trigger route changes
+            context.go('/consultation?id=${consultation.id}');
           },
           borderRadius: BorderRadius.circular(16),
           child: Center(

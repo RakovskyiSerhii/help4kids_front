@@ -16,6 +16,7 @@ sealed class Service with _$Service {
     required Map<String, dynamic> price,
     int? duration,
     @Default(false) bool featured,
+    String? bookingId,
     required DateTime createdAt,
     required DateTime updatedAt,
     String? createdBy,

@@ -200,20 +200,6 @@ class _ServicesScreenState extends State<ServicesScreen> {
     );
   }
 
-  String _formatPrice(Service service) {
-    final map = service.price;
-    final num? base = map['price'] as num?;
-    final String? custom = map['customPriceString'] as String?;
-
-    if (base != null && base > 0) {
-      // Basic formatting, adjust currency/locale as needed.
-      return '${base.toStringAsFixed(0)} грн';
-    }
-    if (custom != null && custom.isNotEmpty) {
-      return custom;
-    }
-    return '';
-  }
 }
 
 class ServicePriceRow extends StatelessWidget {
@@ -221,12 +207,24 @@ class ServicePriceRow extends StatelessWidget {
 
   final Service service;
 
+  String _formatPrice() {
+    final map = service.price;
+    final num? base = map['price'] as num?;
+    final String? custom = map['customPriceString'] as String?;
+
+    if (base != null && base > 0) {
+      return '${base.toStringAsFixed(0)} грн';
+    }
+    if (custom != null && custom.isNotEmpty) {
+      return custom;
+    }
+    return '';
+  }
+
   @override
   Widget build(BuildContext context) {
     final sizeType = context.sizeType;
-    final priceText = context
-        .findAncestorStateOfType<_ServicesScreenState>()!
-        ._formatPrice(service);
+    final priceText = _formatPrice();
 
     final textTheme = Theme.of(context).textTheme;
 

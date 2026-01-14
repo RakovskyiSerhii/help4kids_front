@@ -7,7 +7,6 @@ import 'package:help4kids_front/data/model/service.dart';
 import 'package:help4kids_front/data/model/service_category.dart';
 import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
-import 'package:help4kids_front/presentation/widgets/service_category_icon.dart';
 
 part 'mobile_services_widget.dart';
 
@@ -67,6 +66,59 @@ class ServicesWidget extends StatelessWidget {
   }
 }
 
+class ViewAllServicesWidget extends StatelessWidget {
+  const ViewAllServicesWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedWidget(
+      builder: (context, type) {
+        final double kTitle;
+
+        switch (type) {
+          case SizeType.mobile:
+            kTitle = 0.05;
+            break;
+          case SizeType.tablet:
+            kTitle = 0.018;
+            break;
+          case SizeType.pc:
+            kTitle = 0.018;
+            break;
+        }
+        return ConstrainedBox(
+          constraints: const BoxConstraints(minWidth: 350, minHeight: 200),
+          child: Material(
+            elevation: 5,
+            borderRadius: BorderRadius.circular(20),
+            child: InkWell(
+              onTap: () {
+                context.goNamed(Screen.services);
+              },
+              borderRadius: BorderRadius.circular(20),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Переглянути всі',
+                      textAlign: TextAlign.center,
+                      style: context.theme.textTheme.titleMedium?.copyWith(
+                        fontSize: MediaQuery.of(context).size.width * kTitle,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
 class ServiceItemWidget extends StatelessWidget {
   const ServiceItemWidget({super.key, required this.service});
 
@@ -112,14 +164,6 @@ class ServiceItemWidget extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Icon at the top
-                    ServiceCategoryIcon(
-                      iconUrl: service.iconUrl,
-                      width: 48,
-                      height: 48,
-                      color: context.theme.colorScheme.primary,
-                    ),
-                    const SizedBox(height: 12),
                     Text(
                       service.name,
                       textAlign: TextAlign.center,

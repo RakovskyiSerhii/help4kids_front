@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Consultation {
 
- String get id; String get title; String? get shortDescription; String? get description; double get price; String? get duration; Map<String, dynamic>? get question; bool get featured; DateTime get createdAt; DateTime get updatedAt; String? get createdBy; String? get updatedBy;
+ String get id; String get title; String? get shortDescription; String? get description; double get price; String? get duration; Map<String, dynamic>? get question; bool get featured; String? get bookingId; String? get paymentUrl; DateTime get createdAt; DateTime get updatedAt; String? get createdBy; String? get updatedBy;
 /// Create a copy of Consultation
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $ConsultationCopyWith<Consultation> get copyWith => _$ConsultationCopyWithImpl<C
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Consultation&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.shortDescription, shortDescription) || other.shortDescription == shortDescription)&&(identical(other.description, description) || other.description == description)&&(identical(other.price, price) || other.price == price)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other.question, question)&&(identical(other.featured, featured) || other.featured == featured)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.updatedBy, updatedBy) || other.updatedBy == updatedBy));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Consultation&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.shortDescription, shortDescription) || other.shortDescription == shortDescription)&&(identical(other.description, description) || other.description == description)&&(identical(other.price, price) || other.price == price)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other.question, question)&&(identical(other.featured, featured) || other.featured == featured)&&(identical(other.bookingId, bookingId) || other.bookingId == bookingId)&&(identical(other.paymentUrl, paymentUrl) || other.paymentUrl == paymentUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.updatedBy, updatedBy) || other.updatedBy == updatedBy));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,shortDescription,description,price,duration,const DeepCollectionEquality().hash(question),featured,createdAt,updatedAt,createdBy,updatedBy);
+int get hashCode => Object.hash(runtimeType,id,title,shortDescription,description,price,duration,const DeepCollectionEquality().hash(question),featured,bookingId,paymentUrl,createdAt,updatedAt,createdBy,updatedBy);
 
 @override
 String toString() {
-  return 'Consultation(id: $id, title: $title, shortDescription: $shortDescription, description: $description, price: $price, duration: $duration, question: $question, featured: $featured, createdAt: $createdAt, updatedAt: $updatedAt, createdBy: $createdBy, updatedBy: $updatedBy)';
+  return 'Consultation(id: $id, title: $title, shortDescription: $shortDescription, description: $description, price: $price, duration: $duration, question: $question, featured: $featured, bookingId: $bookingId, paymentUrl: $paymentUrl, createdAt: $createdAt, updatedAt: $updatedAt, createdBy: $createdBy, updatedBy: $updatedBy)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $ConsultationCopyWith<$Res>  {
   factory $ConsultationCopyWith(Consultation value, $Res Function(Consultation) _then) = _$ConsultationCopyWithImpl;
 @useResult
 $Res call({
- String id, String title, String? shortDescription, String? description, double price, String? duration, Map<String, dynamic>? question, bool featured, DateTime createdAt, DateTime updatedAt, String? createdBy, String? updatedBy
+ String id, String title, String? shortDescription, String? description, double price, String? duration, Map<String, dynamic>? question, bool featured, String? bookingId, String? paymentUrl, DateTime createdAt, DateTime updatedAt, String? createdBy, String? updatedBy
 });
 
 
@@ -65,7 +65,7 @@ class _$ConsultationCopyWithImpl<$Res>
 
 /// Create a copy of Consultation
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? shortDescription = freezed,Object? description = freezed,Object? price = null,Object? duration = freezed,Object? question = freezed,Object? featured = null,Object? createdAt = null,Object? updatedAt = null,Object? createdBy = freezed,Object? updatedBy = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? shortDescription = freezed,Object? description = freezed,Object? price = null,Object? duration = freezed,Object? question = freezed,Object? featured = null,Object? bookingId = freezed,Object? paymentUrl = freezed,Object? createdAt = null,Object? updatedAt = null,Object? createdBy = freezed,Object? updatedBy = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -75,7 +75,9 @@ as String?,price: null == price ? _self.price : price // ignore: cast_nullable_t
 as double,duration: freezed == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
 as String?,question: freezed == question ? _self.question : question // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,featured: null == featured ? _self.featured : featured // ignore: cast_nullable_to_non_nullable
-as bool,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as bool,bookingId: freezed == bookingId ? _self.bookingId : bookingId // ignore: cast_nullable_to_non_nullable
+as String?,paymentUrl: freezed == paymentUrl ? _self.paymentUrl : paymentUrl // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String?,updatedBy: freezed == updatedBy ? _self.updatedBy : updatedBy // ignore: cast_nullable_to_non_nullable
@@ -161,10 +163,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  String? bookingId,  String? paymentUrl,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Consultation() when $default != null:
-return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);case _:
+return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.bookingId,_that.paymentUrl,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);case _:
   return orElse();
 
 }
@@ -182,10 +184,10 @@ return $default(_that.id,_that.title,_that.shortDescription,_that.description,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  String? bookingId,  String? paymentUrl,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)  $default,) {final _that = this;
 switch (_that) {
 case _Consultation():
-return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);}
+return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.bookingId,_that.paymentUrl,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -199,10 +201,10 @@ return $default(_that.id,_that.title,_that.shortDescription,_that.description,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String? shortDescription,  String? description,  double price,  String? duration,  Map<String, dynamic>? question,  bool featured,  String? bookingId,  String? paymentUrl,  DateTime createdAt,  DateTime updatedAt,  String? createdBy,  String? updatedBy)?  $default,) {final _that = this;
 switch (_that) {
 case _Consultation() when $default != null:
-return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);case _:
+return $default(_that.id,_that.title,_that.shortDescription,_that.description,_that.price,_that.duration,_that.question,_that.featured,_that.bookingId,_that.paymentUrl,_that.createdAt,_that.updatedAt,_that.createdBy,_that.updatedBy);case _:
   return null;
 
 }
@@ -214,7 +216,7 @@ return $default(_that.id,_that.title,_that.shortDescription,_that.description,_t
 @JsonSerializable()
 
 class _Consultation implements Consultation {
-  const _Consultation({required this.id, required this.title, this.shortDescription, this.description, required this.price, this.duration, final  Map<String, dynamic>? question, this.featured = false, required this.createdAt, required this.updatedAt, this.createdBy, this.updatedBy}): _question = question;
+  const _Consultation({required this.id, required this.title, this.shortDescription, this.description, required this.price, this.duration, final  Map<String, dynamic>? question, this.featured = false, this.bookingId, this.paymentUrl, required this.createdAt, required this.updatedAt, this.createdBy, this.updatedBy}): _question = question;
   factory _Consultation.fromJson(Map<String, dynamic> json) => _$ConsultationFromJson(json);
 
 @override final  String id;
@@ -233,6 +235,8 @@ class _Consultation implements Consultation {
 }
 
 @override@JsonKey() final  bool featured;
+@override final  String? bookingId;
+@override final  String? paymentUrl;
 @override final  DateTime createdAt;
 @override final  DateTime updatedAt;
 @override final  String? createdBy;
@@ -251,16 +255,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Consultation&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.shortDescription, shortDescription) || other.shortDescription == shortDescription)&&(identical(other.description, description) || other.description == description)&&(identical(other.price, price) || other.price == price)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other._question, _question)&&(identical(other.featured, featured) || other.featured == featured)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.updatedBy, updatedBy) || other.updatedBy == updatedBy));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Consultation&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.shortDescription, shortDescription) || other.shortDescription == shortDescription)&&(identical(other.description, description) || other.description == description)&&(identical(other.price, price) || other.price == price)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other._question, _question)&&(identical(other.featured, featured) || other.featured == featured)&&(identical(other.bookingId, bookingId) || other.bookingId == bookingId)&&(identical(other.paymentUrl, paymentUrl) || other.paymentUrl == paymentUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.updatedBy, updatedBy) || other.updatedBy == updatedBy));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,shortDescription,description,price,duration,const DeepCollectionEquality().hash(_question),featured,createdAt,updatedAt,createdBy,updatedBy);
+int get hashCode => Object.hash(runtimeType,id,title,shortDescription,description,price,duration,const DeepCollectionEquality().hash(_question),featured,bookingId,paymentUrl,createdAt,updatedAt,createdBy,updatedBy);
 
 @override
 String toString() {
-  return 'Consultation(id: $id, title: $title, shortDescription: $shortDescription, description: $description, price: $price, duration: $duration, question: $question, featured: $featured, createdAt: $createdAt, updatedAt: $updatedAt, createdBy: $createdBy, updatedBy: $updatedBy)';
+  return 'Consultation(id: $id, title: $title, shortDescription: $shortDescription, description: $description, price: $price, duration: $duration, question: $question, featured: $featured, bookingId: $bookingId, paymentUrl: $paymentUrl, createdAt: $createdAt, updatedAt: $updatedAt, createdBy: $createdBy, updatedBy: $updatedBy)';
 }
 
 
@@ -271,7 +275,7 @@ abstract mixin class _$ConsultationCopyWith<$Res> implements $ConsultationCopyWi
   factory _$ConsultationCopyWith(_Consultation value, $Res Function(_Consultation) _then) = __$ConsultationCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String title, String? shortDescription, String? description, double price, String? duration, Map<String, dynamic>? question, bool featured, DateTime createdAt, DateTime updatedAt, String? createdBy, String? updatedBy
+ String id, String title, String? shortDescription, String? description, double price, String? duration, Map<String, dynamic>? question, bool featured, String? bookingId, String? paymentUrl, DateTime createdAt, DateTime updatedAt, String? createdBy, String? updatedBy
 });
 
 
@@ -288,7 +292,7 @@ class __$ConsultationCopyWithImpl<$Res>
 
 /// Create a copy of Consultation
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? shortDescription = freezed,Object? description = freezed,Object? price = null,Object? duration = freezed,Object? question = freezed,Object? featured = null,Object? createdAt = null,Object? updatedAt = null,Object? createdBy = freezed,Object? updatedBy = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? shortDescription = freezed,Object? description = freezed,Object? price = null,Object? duration = freezed,Object? question = freezed,Object? featured = null,Object? bookingId = freezed,Object? paymentUrl = freezed,Object? createdAt = null,Object? updatedAt = null,Object? createdBy = freezed,Object? updatedBy = freezed,}) {
   return _then(_Consultation(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -298,7 +302,9 @@ as String?,price: null == price ? _self.price : price // ignore: cast_nullable_t
 as double,duration: freezed == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
 as String?,question: freezed == question ? _self._question : question // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,featured: null == featured ? _self.featured : featured // ignore: cast_nullable_to_non_nullable
-as bool,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as bool,bookingId: freezed == bookingId ? _self.bookingId : bookingId // ignore: cast_nullable_to_non_nullable
+as String?,paymentUrl: freezed == paymentUrl ? _self.paymentUrl : paymentUrl // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String?,updatedBy: freezed == updatedBy ? _self.updatedBy : updatedBy // ignore: cast_nullable_to_non_nullable

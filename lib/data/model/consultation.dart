@@ -13,6 +13,8 @@ sealed class Consultation with _$Consultation {
     String? duration,
     Map<String, dynamic>? question,
     @Default(false) bool featured,
+    String? bookingId,
+    String? paymentUrl,
     required DateTime createdAt,
     required DateTime updatedAt,
     String? createdBy,

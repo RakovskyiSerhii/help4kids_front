@@ -14,7 +14,9 @@ class PcConsultationWidget extends StatelessWidget {
         children: [
           Text(
             'Запис на онлайн консультацію',
-            style: context.theme.textTheme.titleLarge,
+            style: context.theme.textTheme.titleLarge?.copyWith(
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 16),
           Row(

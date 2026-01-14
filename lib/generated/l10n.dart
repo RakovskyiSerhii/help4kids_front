@@ -18,8 +18,10 @@ class AppLocalizations {
   static AppLocalizations? _current;
 
   static AppLocalizations get current {
-    assert(_current != null,
-        'No instance of AppLocalizations was loaded. Try to initialize the AppLocalizations delegate before accessing AppLocalizations.current.');
+    assert(
+      _current != null,
+      'No instance of AppLocalizations was loaded. Try to initialize the AppLocalizations delegate before accessing AppLocalizations.current.',
+    );
     return _current!;
   }
 
@@ -41,8 +43,10 @@ class AppLocalizations {
 
   static AppLocalizations of(BuildContext context) {
     final instance = AppLocalizations.maybeOf(context);
-    assert(instance != null,
-        'No instance of AppLocalizations present in the widget tree. Did you add AppLocalizations.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of AppLocalizations present in the widget tree. Did you add AppLocalizations.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -52,12 +56,7 @@ class AppLocalizations {
 
   /// `Help4Kids app`
   String get title {
-    return Intl.message(
-      'Help4Kids app',
-      name: 'title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Help4Kids app', name: 'title', desc: '', args: []);
   }
 
   /// `Профессійний медичний нагляд – турботливо та з любов’ю\n\nКонсультації педіатра\n\nПрофілактичні огляди здорових дітей до 3 років\nКонсультації з грудного вигодовування\nЛікування за міжнародними рекомендаціями\nЛікування дітей і дорослих з внутрішньовенним введенням препаратів\n\nЖіноча консультація (м. Мерефа) – ніжно і дбайливо\n\nОформлення всіх необхідних довідок і листків непрацездатності\n\nМедичні огляди в школу та дитячий садок – комплексно, швидко, без черг\n\nВакцинація дітей та дорослих – ефективно та безпечно, якісними європейськими вакцинами\n\nАналізи – вчасно та якісно, експрес тести – миттєвий результат\n\nДбаємо про Ваше здоров’я, зберігаємо Ваш спокій, цінуємо Ваш час і забезпечуємо максимальний сервіс і комфорт!`

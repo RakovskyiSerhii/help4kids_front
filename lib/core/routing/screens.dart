@@ -8,4 +8,5 @@ class Screen {
   static const consultations = 'consultations';
   static const consultationDetail = 'consultationDetail';
   static const profile = 'profile';
+  static const paymentSuccess = 'paymentSuccess';
 }
