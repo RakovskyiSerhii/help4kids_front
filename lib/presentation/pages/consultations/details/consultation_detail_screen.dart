@@ -9,6 +9,7 @@ import 'package:help4kids_front/presentation/pages/consultations/details/consult
 import 'package:help4kids_front/presentation/pages/consultations/details/consultation_detail_state.dart';
 import 'package:help4kids_front/presentation/pages/widgets/footer%20/footer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/header/header_widget.dart';
+import 'package:help4kids_front/presentation/pages/widgets/header/mobile_drawer_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ConsultationDetailScreen extends StatefulWidget {
@@ -80,11 +81,12 @@ class _ConsultationDetailScreenState extends State<ConsultationDetailScreen> {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: _cubit,
-      child: Scaffold(
-        body: BlocBuilder<AppCubit, AppState>(
-          builder: (context, appState) {
-            final categories = appState.info?.categories ?? [];
-            return Column(
+      child: BlocBuilder<AppCubit, AppState>(
+        builder: (context, appState) {
+          final categories = appState.info?.categories ?? [];
+          return Scaffold(
+            drawer: MobileDrawerWidget(serviceCategories: categories),
+            body: Column(
               children: [
                 HeaderWidget(serviceCategories: categories),
                 Expanded(
@@ -232,9 +234,9 @@ class _ConsultationDetailScreenState extends State<ConsultationDetailScreen> {
                   ),
                 ),
               ],
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

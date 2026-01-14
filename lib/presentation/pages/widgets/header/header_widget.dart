@@ -59,7 +59,9 @@ class HeaderWidget extends StatelessWidget {
               return switch (type) {
                 SizeType.mobile => IconButton(
                     icon: Icon(Icons.menu),
-                    onPressed: () {},
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
                   ),
                 SizeType.pc || SizeType.tablet => Row(
                     children: [

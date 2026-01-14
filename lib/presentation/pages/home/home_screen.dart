@@ -10,6 +10,7 @@ import 'package:help4kids_front/presentation/pages/home/widgets/services/service
 import 'package:help4kids_front/presentation/pages/home/widgets/staff/staff_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/footer%20/footer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/header/header_widget.dart';
+import 'package:help4kids_front/presentation/pages/widgets/header/mobile_drawer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,26 +18,31 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
-        create: (context) => getIt.get<HomeCubit>(),
-        child: BlocBuilder<HomeCubit, HomeState>(
-          builder: (context, state) {
-            if (state.loadingResult?.isProgress == true) {
-              return const Center(
+    return BlocProvider(
+      create: (context) => getIt.get<HomeCubit>(),
+      child: BlocBuilder<HomeCubit, HomeState>(
+        builder: (context, state) {
+          if (state.loadingResult?.isProgress == true) {
+            return const Scaffold(
+              body: Center(
                 child: CircularProgressIndicator(),
-              );
-            }
+              ),
+            );
+          }
 
-            // If loading failed or landing data is still null, show a simple
-            // fallback instead of crashing on a null access.
-            if (state.landing == null) {
-              return const Center(
+          if (state.landing == null) {
+            return const Scaffold(
+              body: Center(
                 child: Text('Не вдалося завантажити дані. Спробуйте пізніше.'),
-              );
-            }
+              ),
+            );
+          }
 
-            return Column(
+          return Scaffold(
+            drawer: MobileDrawerWidget(
+              serviceCategories: state.landing!.featuredServices,
+            ),
+            body: Column(
               children: [
                 HeaderWidget(serviceCategories: state.landing!.featuredServices),
                 Expanded(
@@ -180,9 +186,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

@@ -10,6 +10,7 @@ import 'package:help4kids_front/presentation/pages/services/services_cubit.dart'
 import 'package:help4kids_front/presentation/pages/services/services_state.dart';
 import 'package:help4kids_front/presentation/pages/widgets/footer%20/footer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/header/header_widget.dart';
+import 'package:help4kids_front/presentation/pages/widgets/header/mobile_drawer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
 
 class ServicesScreen extends StatefulWidget {
@@ -51,19 +52,22 @@ class _ServicesScreenState extends State<ServicesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
-        create: (context) => getIt.get<ServicesCubit>()..load(),
-        child: BlocBuilder<ServicesCubit, ServicesState>(
-          builder: (context, state) {
-            if (state.loadResult?.isProgress == true) {
-              return Center(child: CircularProgressIndicator());
-            }
-            final categories = state.categories ?? [];
-            final services = state.services ?? <Service>[];
-            // Once categories are available, try to scroll to the initial category.
-            _maybeScrollToInitialCategory(categories);
-            return Column(
+    return BlocProvider(
+      create: (context) => getIt.get<ServicesCubit>()..load(),
+      child: BlocBuilder<ServicesCubit, ServicesState>(
+        builder: (context, state) {
+          if (state.loadResult?.isProgress == true) {
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            );
+          }
+          final categories = state.categories ?? [];
+          final services = state.services ?? <Service>[];
+          // Once categories are available, try to scroll to the initial category.
+          _maybeScrollToInitialCategory(categories);
+          return Scaffold(
+            drawer: MobileDrawerWidget(serviceCategories: categories),
+            body: Column(
               children: [
                 HeaderWidget(serviceCategories: categories),
                 Expanded(
@@ -80,9 +84,9 @@ class _ServicesScreenState extends State<ServicesScreen> {
                   ),
                 ),
               ],
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }
