@@ -6,7 +6,7 @@
 
 set -e
 
-DOMAIN=${1:-"yourdomain.com"}
+DOMAIN=${1:-"help4kids.com.ua"}
 DEPLOY_DIR="deploy"
 BUILD_DIR="build/web"
 

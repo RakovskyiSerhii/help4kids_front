@@ -6,6 +6,7 @@ import 'package:help4kids_front/generated/assets.gen.dart';
 import 'package:help4kids_front/presentation/pages/home/home_cubit.dart';
 import 'package:help4kids_front/presentation/pages/home/home_state.dart';
 import 'package:help4kids_front/presentation/pages/home/widgets/about/about_widget.dart';
+import 'package:help4kids_front/presentation/pages/home/widgets/nevidkladna_course/nevidkladna_course_widget.dart';
 import 'package:help4kids_front/presentation/pages/home/widgets/services/services_widget.dart';
 import 'package:help4kids_front/presentation/pages/home/widgets/staff/staff_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/footer%20/footer_widget.dart';
@@ -175,6 +176,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 50),
                         AboutWidget(),
+                        const SizedBox(height: 50),
+                        const NevidkladnaCourseWidget(),
                         const SizedBox(height: 50),
                         ServicesWidget(list: state.landing!.featuredServices),
                         const SizedBox(height: 50),

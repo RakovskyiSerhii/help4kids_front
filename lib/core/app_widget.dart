@@ -16,6 +16,7 @@ import 'package:help4kids_front/presentation/pages/consultations/consultations_s
 import 'package:help4kids_front/presentation/pages/consultations/details/consultation_detail_screen.dart';
 import 'package:help4kids_front/presentation/pages/cources/courses_screen.dart';
 import 'package:help4kids_front/presentation/pages/home/home_screen.dart';
+import 'package:help4kids_front/presentation/pages/nevidkladna_dopomoga/nevidkladna_dopomoga_screen.dart';
 import 'package:help4kids_front/presentation/pages/profile/profile_screen.dart';
 import 'package:help4kids_front/presentation/pages/services/services_screen.dart';
 import 'package:help4kids_front/presentation/pages/verify_email/verify_email_page.dart';

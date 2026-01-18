@@ -116,5 +116,13 @@ _appRouter(
             key: state.pageKey,
           ),
         ),
+        GoRoute(
+          path: '/nevidkladna-dopomoga',
+          name: Screen.nevidkladnaDopomoga,
+          pageBuilder: (context, state) => _noTransitionPage(
+            const NevidkladnaDopomogaScreen(),
+            key: state.pageKey,
+          ),
+        ),
       ])),
     );

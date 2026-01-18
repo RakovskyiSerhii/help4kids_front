@@ -9,4 +9,5 @@ class Screen {
   static const consultationDetail = 'consultationDetail';
   static const profile = 'profile';
   static const paymentSuccess = 'paymentSuccess';
+  static const nevidkladnaDopomoga = 'nevidkladnaDopomoga';
 }

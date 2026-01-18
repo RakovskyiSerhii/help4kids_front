@@ -1067,6 +1067,10 @@ class $AssetsIconsGen {
   AssetGenImage get helpkidsLogo =>
       const AssetGenImage('assets/icons/helpkids_logo.png');
 
+  /// File path: assets/icons/helpkids_logo_square.png
+  AssetGenImage get helpkidsLogoSquare =>
+      const AssetGenImage('assets/icons/helpkids_logo_square.png');
+
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft =>
       const SvgGenImage('assets/icons/ic_arrow_left.svg');
@@ -1113,6 +1117,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<dynamic> get values => [
     helpkidsLogo,
+    helpkidsLogoSquare,
     icArrowLeft,
     icArrowRight,
     icBrain,

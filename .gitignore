@@ -46,3 +46,4 @@ app.*.map.json
 
 # Deployment files
 /deploy/
+deploy.config
