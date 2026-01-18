@@ -101,7 +101,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
 
     return Container(
       decoration: BoxDecoration(
-        color: context.theme.primaryColor.withOpacity(.2),
+        // color: context.theme.primaryColor.withOpacity(.2),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -110,10 +110,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
       child: ListView.separated(
         itemBuilder: (context, index) {
           final category = categories[index];
-          final key = _categoryKeys.putIfAbsent(
-            category.id,
-            () => GlobalKey(),
-          );
+          final key = _categoryKeys.putIfAbsent(category.id, () => GlobalKey());
           final categorizedServices = services
               .where((element) => element.categoryId == category.id)
               .toList();
@@ -203,7 +200,6 @@ class _ServicesScreenState extends State<ServicesScreen> {
       },
     );
   }
-
 }
 
 class ServicePriceRow extends StatelessWidget {
@@ -236,10 +232,7 @@ class ServicePriceRow extends StatelessWidget {
     if (priceText.isEmpty) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
-        child: Text(
-          service.title,
-          style: textTheme.bodyLarge,
-        ),
+        child: Text(service.title, style: textTheme.bodyLarge),
       );
     }
 
@@ -250,15 +243,13 @@ class ServicePriceRow extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              service.title,
-              style: textTheme.bodyLarge,
-            ),
+            Text(service.title, style: textTheme.bodyLarge),
             const SizedBox(height: 4),
             Text(
               priceText,
-              style:
-                  textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+              style: textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ],
         ),
@@ -287,8 +278,9 @@ class ServicePriceRow extends StatelessWidget {
               child: Text(
                 priceText,
                 textAlign: TextAlign.end,
-                style: textTheme.titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w600),
+                style: textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),

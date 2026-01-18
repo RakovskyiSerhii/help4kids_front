@@ -136,12 +136,16 @@ class FooterWidget extends StatelessWidget {
                             children: [
                               Text(
                                 '© 2020 – ${DateTime.now().year} help4kids.com.ua',
-                                style: context.theme.textTheme.titleSmall,
+                                style: context.theme.textTheme.titleSmall?.copyWith(
+                                  color: Colors.white,
+                                ),
                               ),
                               Spacer(),
                               Text(
                                 'У разі надзвичайної ситуації дзвоніть 103',
-                                style: context.theme.textTheme.titleSmall,
+                                style: context.theme.textTheme.titleSmall?.copyWith(
+                                  color: Colors.white,
+                                ),
                               ),
                             ],
                           ),

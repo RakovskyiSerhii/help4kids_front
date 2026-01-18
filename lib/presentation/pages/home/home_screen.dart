@@ -52,67 +52,26 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: MediaQuery.of(context).size.width * 0.98,
+                          width: double.infinity,
                           height: MediaQuery.of(context).size.height - 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(
-                                  MediaQuery.of(context).size.width * 0.30),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: context.theme.colorScheme.secondary,
-                                offset: Offset(20, 0),
-                                blurRadius: 0,
-                                spreadRadius: 0,
-                              ),
-                            ],
-                          ),
                           child: Stack(
                             children: [
-                              ClipRRect(
-                                clipBehavior: Clip.hardEdge,
-                                borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(
-                                      MediaQuery.of(context).size.width * 0.30),
+                              Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          Assets.images.fronBanner.path),
+                                      fit: BoxFit.cover),
                                 ),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            Assets.images.fronBanner.path),
-                                        fit: BoxFit.cover),
-                                    borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(
-                                          MediaQuery.of(context).size.width *
-                                              0.30),
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color:
-                                            context.theme.colorScheme.secondary,
-                                        offset: Offset(20, 0),
-                                        blurRadius: 0,
-                                        spreadRadius: 0,
-                                      ),
+                                foregroundDecoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      context.theme.primaryColor.withOpacity(0),
+                                      context.theme.primaryColor.withOpacity(0.76),
                                     ],
-                                    border: Border(
-                                      right: BorderSide(
-                                        width: 15,
-                                        color: context.theme.primaryColor,
-                                      ),
-                                    ),
-                                  ),
-                                  foregroundDecoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color.fromRGBO(43, 135, 218, 0),
-                                        Color.fromRGBO(161, 200, 103, 0.76),
-                                      ],
-                                      stops: [0.01, 1.0],
-                                    ),
+                                    stops: [0.01, 1.0],
                                   ),
                                 ),
                               ),

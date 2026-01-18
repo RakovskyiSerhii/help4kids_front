@@ -11,10 +11,10 @@ class AppColors {
   AppColors._();
 
   // Dark theme colors
-  static const darkPrimaryColor = Color(0xffa1c867);
-  static const primaryPaleColor = Color(0xFFdf9148);
-  static const primaryPaleLightColor = Color(0xFFFFF3E0);
-  static const darkSecondaryColor = Color(0xFFdf9148);
+  static const darkPrimaryColor = Color(0xff2FB8AB); // Darker Teal - less toxic
+  static const primaryPaleColor = Color(0xFFFF1493); // Fuchsia/Magenta from logo
+  static const primaryPaleLightColor = Color(0xFFFFE5F3); // Light fuchsia tint
+  static const darkSecondaryColor = Color(0xFFFF1493); // Fuchsia/Magenta from logo
   static const darkSuccessMainColor = Color(0xFF4CAF50);
   static const darkErrorMainColor = Color(0xFFF44336);
   static const darkAlertMainColor = Color(0xFFFFC107);
@@ -29,14 +29,14 @@ class AppColors {
   static const darkBrandDisabledColor = Color(0xFF757575);
 
   // Light theme colors
-  static const lightPrimaryColor = Color(0xffa1c867);
-  static const lightSecondaryColor = Color(0xFFdf9148);
+  static const lightPrimaryColor = Color(0xff2FB8AB); // Darker Teal - less toxic
+  static const lightSecondaryColor = Color(0xFFFF1493); // Fuchsia/Magenta from logo
   static const lightSuccessMainColor = Color(0xFF4CAF50);
   static const lightErrorMainColor = Color(0xFFF44336);
   static const lightAlertMainColor = Color(0xFFFFC107);
   static const lightSurfaceColor = Color(0xFFF5F5F5);
   static const lightLineColor = Color(0xFFEEEEEE);
-  static const lightBackgroundColor = Color(0xFFF9FAFB);
+  static const lightBackgroundColor = Color(0xFFFFFFFF); // Pure white
   static const lightAccentBackgroundColor = Color(0xFFFFFFFF);
   static const lightAccentSecondBackgroundColor = Color(0xFFF2F2F2);
   static const lightTextColor = Color(0xFF0F0F0F);
