@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:help4kids_front/core/app_bloc/app_cubit.dart';
 import 'package:help4kids_front/core/app_bloc/app_state.dart';
+import 'package:help4kids_front/core/config/app_config.dart';
 import 'package:help4kids_front/core/di/injection.dart';
 import 'package:help4kids_front/core/extension/context_extension.dart';
 import 'package:help4kids_front/presentation/pages/consultations/details/consultation_detail_cubit.dart';
@@ -192,8 +193,45 @@ class _ConsultationDetailScreenState extends State<ConsultationDetailScreen> {
                                     ..._buildQuestionsList(consultation.question!, context),
                                   ],
                                   const SizedBox(height: 24),
+                                  if (consultation.bookingId != null &&
+                                      consultation.bookingId!.isNotEmpty)
+                                    Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: SizedBox(
+                                        width: 320,
+                                        child: ElevatedButton.icon(
+                                          onPressed: () async {
+                                            final bookingUrl =
+                                                '${AppConfig.bookingBaseUrl}?o=${consultation.bookingId}';
+                                            final uri = Uri.parse(bookingUrl);
+                                            await launchUrl(
+                                              uri,
+                                              mode: LaunchMode.platformDefault,
+                                              webOnlyWindowName: '_blank',
+                                            );
+                                          },
+                                          icon: const Icon(Icons.event_available),
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: context.theme.colorScheme.primary,
+                                            foregroundColor: Colors.white,
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 48,
+                                              vertical: 20,
+                                            ),
+                                            textStyle: context.theme.textTheme.titleLarge?.copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          label: const Text('Записатись на консультацію'),
+                                        ),
+                                      ),
+                                    ),
                                   if (consultation.paymentUrl != null &&
-                                      consultation.paymentUrl!.isNotEmpty)
+                                      consultation.paymentUrl!.isNotEmpty) ...[
+                                    if (consultation.bookingId != null &&
+                                        consultation.bookingId!.isNotEmpty)
+                                      const SizedBox(height: 16),
                                     Align(
                                       alignment: Alignment.centerLeft,
                                       child: SizedBox(
@@ -223,6 +261,7 @@ class _ConsultationDetailScreenState extends State<ConsultationDetailScreen> {
                                         ),
                                       ),
                                     ),
+                                  ],
                                 ],
                               ),
                             ),

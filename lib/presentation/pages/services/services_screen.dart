@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:help4kids_front/core/config/app_config.dart';
 import 'package:help4kids_front/core/di/injection.dart';
 import 'package:help4kids_front/core/extension/context_extension.dart';
 import 'package:help4kids_front/data/model/service.dart';
@@ -12,6 +13,7 @@ import 'package:help4kids_front/presentation/pages/widgets/footer%20/footer_widg
 import 'package:help4kids_front/presentation/pages/widgets/header/header_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/header/mobile_drawer_widget.dart';
 import 'package:help4kids_front/presentation/pages/widgets/sized_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({super.key, this.initialCategoryId});
@@ -190,7 +192,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Text(
-                  'Ціни сформовані станом на 27.02.2025',
+                  'Ціни сформовані станом на 21.01.2026',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],
@@ -251,6 +253,50 @@ class ServicePriceRow extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            if (service.bookingId != null && service.bookingId!.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              InkWell(
+                onTap: () async {
+                  final bookingUrl =
+                      '${AppConfig.bookingBaseUrl}?o=${service.bookingId}';
+                  final uri = Uri.parse(bookingUrl);
+                  await launchUrl(
+                    uri,
+                    mode: LaunchMode.platformDefault,
+                    webOnlyWindowName: '_blank',
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: context.theme.colorScheme.primary,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.event_available,
+                        size: 14,
+                        color: Colors.white,
+                      ),
+                      const SizedBox(width: 4),
+                      Text(
+                        'Записатись',
+                        style: textTheme.bodySmall?.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ],
         ),
       );
@@ -275,12 +321,72 @@ class ServicePriceRow extends StatelessWidget {
             fit: FlexFit.loose,
             child: Align(
               alignment: Alignment.centerRight,
-              child: Text(
-                priceText,
-                textAlign: TextAlign.end,
-                style: textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Flexible(
+                    child: Text(
+                      priceText,
+                      textAlign: TextAlign.end,
+                      style: textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  if (service.bookingId != null &&
+                      service.bookingId!.isNotEmpty)
+                    Flexible(
+                      child: InkWell(
+                        onTap: () async {
+                          final bookingUrl =
+                              '${AppConfig.bookingBaseUrl}?o=${service.bookingId}';
+                          final uri = Uri.parse(bookingUrl);
+                          await launchUrl(
+                            uri,
+                            mode: LaunchMode.platformDefault,
+                            webOnlyWindowName: '_blank',
+                          );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: context.theme.colorScheme.primary,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.event_available,
+                                size: 14,
+                                color: Colors.white,
+                              ),
+                              const SizedBox(width: 4),
+                              Flexible(
+                                child: Text(
+                                  'Записатись',
+                                  style: textTheme.bodySmall?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 11,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                  else
+                    const SizedBox(width: 100),
+                ],
               ),
             ),
           ),
