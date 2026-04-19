@@ -111,6 +111,31 @@ class ApiClient {
         .toList();
   }
 
+  // Admin: Create course
+  Future<Course> createCourse(Map<String, dynamic> body) async {
+    final response = await _dio.post<Map<String, dynamic>>(
+      _url('/api/courses/create'),
+      data: body,
+    );
+    return Course.fromJson(response.data!);
+  }
+
+  // Admin: Update course
+  Future<Course> updateCourse(String courseId, Map<String, dynamic> body) async {
+    final response = await _dio.put<Map<String, dynamic>>(
+      _url('/api/courses/$courseId'),
+      data: body,
+    );
+    return Course.fromJson(response.data!);
+  }
+
+  // Admin: Delete course
+  Future<void> deleteCourse(String courseId) async {
+    await _dio.delete<void>(
+      _url('/api/courses/$courseId'),
+    );
+  }
+
   // Consultations endpoints
   Future<List<Consultation>> getAllConsultations() async {
     final response = await _dio.get<List<dynamic>>(

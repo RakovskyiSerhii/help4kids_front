@@ -18,4 +18,17 @@ class CourseRepository extends BaseRepository {
   Future<Either<FailureException, List<Course>>> getPurchasedCourses() async {
     return invokeRequest(() => _apiClient.getPurchasedCourses());
   }
+
+  // Admin methods
+  Future<Either<FailureException, Course>> createCourse(Map<String, dynamic> courseData) async {
+    return invokeRequest(() => _apiClient.createCourse(courseData));
+  }
+
+  Future<Either<FailureException, Course>> updateCourse(String courseId, Map<String, dynamic> courseData) async {
+    return invokeRequest(() => _apiClient.updateCourse(courseId, courseData));
+  }
+
+  Future<Either<FailureException, void>> deleteCourse(String courseId) async {
+    return invokeRequest(() => _apiClient.deleteCourse(courseId));
+  }
 }

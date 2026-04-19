@@ -10,4 +10,7 @@ class Screen {
   static const profile = 'profile';
   static const paymentSuccess = 'paymentSuccess';
   static const nevidkladnaDopomoga = 'nevidkladnaDopomoga';
+  static const admin = 'admin';
+  static const adminCreateCourse = 'adminCreateCourse';
+  static const adminEditCourse = 'adminEditCourse';
 }

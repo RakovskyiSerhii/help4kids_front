@@ -124,5 +124,32 @@ _appRouter(
             key: state.pageKey,
           ),
         ),
+        GoRoute(
+          path: '/admin',
+          name: Screen.admin,
+          pageBuilder: (context, state) => _noTransitionPage(
+            const AdminDashboardScreen(),
+            key: state.pageKey,
+          ),
+        ),
+        GoRoute(
+          path: '/admin/courses/create',
+          name: Screen.adminCreateCourse,
+          pageBuilder: (context, state) => _noTransitionPage(
+            const CreateCourseScreen(),
+            key: state.pageKey,
+          ),
+        ),
+        GoRoute(
+          path: '/admin/courses/edit',
+          name: Screen.adminEditCourse,
+          pageBuilder: (context, state) {
+            final courseId = state.uri.queryParameters['id'];
+            return _noTransitionPage(
+              CreateCourseScreen(courseId: courseId),
+              key: state.pageKey,
+            );
+          },
+        ),
       ])),
     );

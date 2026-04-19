@@ -33,10 +33,14 @@ import 'package:help4kids_front/data/network/repository/service_repository.dart'
     as _i494;
 import 'package:help4kids_front/data/network/repository/user_repository.dart'
     as _i617;
+import 'package:help4kids_front/presentation/pages/admin/admin_cubit.dart'
+    as _i136;
 import 'package:help4kids_front/presentation/pages/consultations/details/consultation_detail_cubit.dart'
     as _i62;
 import 'package:help4kids_front/presentation/pages/home/home_cubit.dart'
     as _i1048;
+import 'package:help4kids_front/presentation/pages/profile/profile_cubit.dart'
+    as _i1014;
 import 'package:help4kids_front/presentation/pages/services/services_cubit.dart'
     as _i1066;
 import 'package:injectable/injectable.dart' as _i526;
@@ -90,11 +94,17 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i408.AppCubit>(
       () => _i408.AppCubit(gh<_i891.LandingRepository>()),
     );
+    gh.factory<_i136.AdminCubit>(
+      () => _i136.AdminCubit(gh<_i251.CourseRepository>()),
+    );
     gh.factory<_i1066.ServicesCubit>(
       () => _i1066.ServicesCubit(
         gh<_i494.ServiceRepository>(),
         gh<_i408.AppCubit>(),
       ),
+    );
+    gh.factory<_i1014.ProfileCubit>(
+      () => _i1014.ProfileCubit(gh<_i617.UserRepository>()),
     );
     return this;
   }
