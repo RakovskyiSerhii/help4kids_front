@@ -47,3 +47,9 @@ app.*.map.json
 # Deployment files
 /deploy/
 deploy.config
+
+# FVM
+.fvm/flutter_sdk
+.fvm/versions
+.fvm/release
+.fvm/version
